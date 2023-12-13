@@ -1,14 +1,15 @@
 import React from "react";
 
 export default function EnhancedText({ children, kind, color }) {
+  // no bg or text-color here, just size
   const style = {
-    one: "text-2xl font-semibold",
+    one: "text-3xl font-semibold leading-5",
     two: "text-xl font-semibold",
     three: "text-lg font-semibold",
     four: "text-base font-semibold",
     five: "text-base font-normal",
-    mute: "text-sm text-neutral-500 font-normal text-sm",
+    mute: "text-sm  font-normal",
   };
 
-  return <p className={`${style[kind]} ${color}   `}>{children}</p>;
+  return <p className={` ${style[kind]} ${color}`}>{children}</p>;
 }

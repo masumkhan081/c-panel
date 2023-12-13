@@ -9,7 +9,7 @@ export default function CustomButton({
   endIcon,
 }) {
   return (
-    <button className={`flex justify-between ${style}`} onClick={afterClick}>
+    <button className={`flex justify-between ${style} `} onClick={afterClick}>
       {startIcon}
       {txt}
       {endIcon}

@@ -30,6 +30,10 @@ body {
   @apply bg-slate-100;
 }
 
+.cmn_icon_style {
+  @apply w-5 h-5 text-slate-500;
+}
+
 .enhanced_title {
   @apply text-1.5/2 font-bold text-teal-700;
 }
