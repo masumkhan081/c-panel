@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.bg_sl_1 {
+  @apply bg-slate-100;
+}
+
+.enhanced_title {
+  @apply text-1.5/2 font-bold text-teal-700;
+}
