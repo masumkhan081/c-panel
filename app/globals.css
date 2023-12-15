@@ -15,8 +15,20 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-body {
+::-webkit-scrollbar {
+  width: 0.1rem;
+  height: 4rem;
+}
+::-webkit-scrollbar-button {
+  background: #b61d1d;
+}
+::-webkit-scrollbar-track-piece {
+  background: #1bac6f;
+}
+::-webkit-scrollbar-thumb {
+  background: #d32020;
+}
+​ body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -26,11 +38,14 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.nav_drop_down {
+  @apply block absolute z-10 top-[43px]   right-[15px] w-15.0 h-auto border rounded-md bg-green-200 border-yellow-600;
+}
 .bg_sl_1 {
   @apply bg-slate-100;
 }
 
-.cmn_icon_style {
+.icon_sm {
   @apply w-5 h-5 text-slate-500;
 }
 
