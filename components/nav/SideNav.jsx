@@ -104,7 +104,7 @@ export default function SideNav() {
         <div>
           <CustomButton
             id="pokath"
-            afterHover={(e) => alert(e.target.offsetTop)}
+            // afterHover={(e) => alert(e.target.offsetTop)}
             startIcon={<User className={cmn_icn_class} />}
             txt={isSideNavFolded ? "modal" : " many many text"}
             style="border-2 border-teal-600"
@@ -113,20 +113,20 @@ export default function SideNav() {
         <div>
           <CustomButton
             id="pussyass"
-            afterHover={(e) =>
-              setTopSpace(document.getElementById("pussyass").offsetTop)
-            }
+            // afterHover={(e) =>
+            //   setTopSpace(document.getElementById("pussyass").offsetTop)
+            // }
             startIcon={<User className={cmn_icn_class} />}
             txt={isSideNavFolded ? "--" : " many many text"}
             style="border-2 border-teal-600"
           />
-          {isSideNavFolded ? (
+          {/* {isSideNavFolded ? (
             <div
               className={`block absolute z-10 left-[120px] ${adjustTop()} border rounded-md bg-wh border-yellow-600 w-38.0 h-25.0`}
             >
               <span>obj-modal</span>
             </div>
-          ) : null}
+          ) : null} */}
         </div>
       </ul>
 
