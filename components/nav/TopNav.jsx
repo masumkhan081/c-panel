@@ -8,12 +8,10 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   setProfileModal,
   setSideNavVisibility,
-} from "../../redux/slices/NavView";
-import Modal from "../ui-custom/CustomModal";
-import ModalTriggerProfile from "../modal-triggers/Profile";
+} from "../../redux/slices/NavView"; 
 import ModalBodyProfile from "../modal-body/Profile";
 //
-export default function TopNav({ click }) {
+export default function TopNav() {
   //
   const dispatch = useDispatch();
   const isUserLoggedIn = useSelector((state) => state.user.authenticated);
@@ -42,15 +40,15 @@ export default function TopNav({ click }) {
   }, []);
 
   return (
-    <div className="flex flex-col px-1.0 ">
-      <div className="flex justify-between items-center py-0.75 border-b border-sl-1">
+    <div className="w-full flex flex-col px-1.0 bg-slate-200">
+      <div className="flex justify-between items-center py-0.62 px-2 border-b border-slate-400 rounded-b-md">
         <CustomButton
           afterClick={() =>
             dispatch(
               setSideNavVisibility({ isSideNavVisible: !isSideNavVisible })
             )
           }
-          startIcon={<Menu className="w-7 h-7" />}
+          startIcon={<Menu className="w-7 h-7 text-black" />}
           style=" "
         />
 
@@ -66,13 +64,12 @@ export default function TopNav({ click }) {
               )
             }
             startIcon={<UserCog className="w-6 h-7 text-orange-300 my-0.125" />}
-            style=" py-0.125 px-0.5 rounded-full shadow-sm bg-orange-800"
+            style=" py-0.125 px-0.5 rounded-full shadow-sm bg-black"
           />
           <div
             className={isProfileModalOpen ? "nav_drop_down" : `hidden`}
             ref={dropdownRef}
           >
-            <span>{JSON.stringify(isProfileModalOpen)}</span>
             <ModalBodyProfile
               onClose={() => {
                 alert("?");
@@ -81,8 +78,8 @@ export default function TopNav({ click }) {
           </div>
         </p>
       </div>
-      <div className="flex justify-start py-0.75">
-        <span>path/path/path</span>
+      <div className="flex justify-start py-0.5 px-2 border-b border-slate-400  ">
+        <span className="">{"Home" + pathname}</span>
       </div>
     </div>
   );

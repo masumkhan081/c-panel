@@ -6,14 +6,27 @@ export const navViewSlice = createSlice({
     isSideNavFolded: false,
     isSideNavVisible: true,
     isProfileModalOpen: false,
+    expansion: {
+      "User Role": false,
+      User: false,
+      Shop: false,
+      Supplier: false,
+      Customer: false,
+      Service: false,
+      "Product Group": false,
+      Brand: false,
+      "Product Category": false,
+      "Product Model": false,
+      Product: false,
+      Stock: false,
+      Order: false,
+    },
   },
   reducers: {
-    setCurrentView: (state, action) => {
-      const { view, data } = action.payload;
-      console.log("view:   ?  ?      " + view);
-      state.currentView = view;
-      state[`${view}`] = data;
-      state.expanded = state.expanded === "hidden" ? "block" : "block";
+    setExpansion: (state, action) => {
+      const { view, status } = action.payload; 
+     
+      state.expansion[`${view}`] = status;
     },
 
     setProfileModal: (state, action) => {
@@ -29,7 +42,11 @@ export const navViewSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { setProfileModal, setSideNavFoldability, setSideNavVisibility } =
-  navViewSlice.actions;
+export const {
+  setExpansion,
+  setProfileModal,
+  setSideNavFoldability,
+  setSideNavVisibility,
+} = navViewSlice.actions;
 
 export default navViewSlice.reducer;

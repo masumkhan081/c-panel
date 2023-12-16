@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { BsCaretDown } from "react-icons/bs";
+import { ChevronDown } from "lucide-react";
 
-const CustomSelect = ({ options, value, onChange, bg }) => {
+const CustomSelect = ({ options, value, onChange, bg, ph, icon }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const handleClickOutside = (e) => {
@@ -31,15 +31,16 @@ const CustomSelect = ({ options, value, onChange, bg }) => {
   return (
     <div className="relative " ref={dropdownRef}>
       <div
-        className={`py-1 px-1.5 min-w-[110px] rounded-md capitalize cursor-pointer flex justify-between items-center ${styles[bg]}`}
+        className={`py-1 px-1.5 min-w-[80px] rounded-md capitalize cursor-pointer flex justify-between items-center ${styles[bg]}`}
         onClick={toggleDropdown}
       >
-        <span>{value ? value : "Select Catagory"}</span>
-        <BsCaretDown className="w-[1.2rem] h-[1.2rem] ms-1" />
+        {icon && icon}
+        <span>{value ? value : ph}</span>
+        <ChevronDown className="w-[1.2rem] h-[1.2rem] ms-1" />
       </div>
 
       {isOpen ? (
-        <ul className="absolute w-10.6 z-10 top-full text-black  border  rounded-md shadow   overflow-y-auto scrollbar bg-white max-h-60">
+        <ul className="absolute min-w-10.0 z-10 top-full text-black  border  rounded-md shadow   overflow-y-auto scrollbar bg-white max-h-60">
           {options?.map((option, index) => (
             <li
               key={index}

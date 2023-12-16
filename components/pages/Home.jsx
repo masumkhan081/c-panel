@@ -6,7 +6,7 @@ import SummeryCard from "../page-partials/dashboard/SummeryCard";
 
 export default function Home() {
   return (
-    <div className=" bg_sl_1 w-full  flex flex-col gap-5 justify-center items-center border-2 border-red-700">
+    <div className=" bg-wh w-full h-full overflow-y-scroll flex flex-col gap-5 justify-start items-center py-1.0 px-0.5  ">
       <div className="grid gap-4 md:grid-cols-4 sm:grid-cols-2 grid-cols-1   ">
         {summery.map((item) => {
           return (

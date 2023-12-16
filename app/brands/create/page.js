@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div>page-create</div>
+    <div>page-brand-create</div>
   )
 }

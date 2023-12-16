@@ -9,7 +9,6 @@ export default function ProtectedRoute({ children }) {
   const authenticated = useSelector((state) => state.user.authenticated);
 
   useEffect(() => {
-    alert("?? >> " + JSON.stringify(authenticated));
     if (authenticated === false) {
       redirect("/login");
     }

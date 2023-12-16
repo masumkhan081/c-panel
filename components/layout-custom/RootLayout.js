@@ -13,24 +13,21 @@ export default function RootLayout({ content }) {
 
   const path = usePathname();
   return (
-    <div>
-    {path+" >> "+JSON.stringify(path.endsWith("login"))}
-      <div className="flex   min-h-screen w-full">
-        {path.endsWith("login")===false && (
-          <>
-            <div className={`${view()}    h-screen `}>
-              <SideNav sideNavHidden={sideNavHidden} />
-            </div>
+    <div className="flex min-h-screen w-full ">
+      {path.endsWith("login") === false && (
+        <>
+          <div className={`${view()}    h-screen `}>
+            <SideNav sideNavHidden={sideNavHidden} />
+          </div>
 
-            <div className="flex flex-grow flex-col  h-screen  ">
-              <TopNav click={() => setSideNav(!sideNavHidden)} />
-              {content}
-              <Footer />
-            </div>
-          </>
-        )}
-        {path.endsWith("login")===true && <>{ content }</>}
-      </div>
+          <div className="flex flex-grow flex-col justify-between w-full h-screen  ">
+            <TopNav />
+            {content}
+            <Footer />
+          </div>
+        </>
+      )}
+      {path.endsWith("login") === true && <>{content}</>}
     </div>
   );
 }
