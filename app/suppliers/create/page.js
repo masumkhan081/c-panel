@@ -1,7 +1,10 @@
-import React from 'react'
+import AddSupplier from "@/components/page-partials/supplier/AddSupplier";
+import React from "react";
 
 export default function page() {
   return (
-    <div>page-suppliers-create</div>
-  )
+    <div className="bg-slate-200 w-full h-full overflow-y-scroll flex flex-col justify-center">
+      <AddSupplier useForEdit={false} />
+    </div>
+  );
 }

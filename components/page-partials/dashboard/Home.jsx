@@ -1,8 +1,8 @@
 import React from "react";
-import EnhancedText from "../ui-custom/EnhancedText";
+import EnhancedText from "../../ui-custom/EnhancedText";
 import Link from "next/link";
-import summery from "../../static-data/dashboard-summery";
-import SummeryCard from "../page-partials/dashboard/SummeryCard";
+import summery from "../../../static-data/dashboard-summery";
+import SummeryCard from "./SummeryCard";
 
 export default function Home() {
   return (

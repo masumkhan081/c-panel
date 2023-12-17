@@ -40,8 +40,8 @@ export default function TopNav() {
   }, []);
 
   return (
-    <div className="w-full flex flex-col px-1.0 bg-slate-200">
-      <div className="flex justify-between items-center py-0.62 px-2 border-b border-slate-400 rounded-b-md">
+    <div className="w-full flex flex-col  bg-wh border-b border-slate-400 rounded-b-md">
+      <div className="flex justify-between items-center  px-1.0 py-0.62   border-b border-slate-300  ">
         <CustomButton
           afterClick={() =>
             dispatch(
@@ -78,7 +78,7 @@ export default function TopNav() {
           </div>
         </p>
       </div>
-      <div className="flex justify-start py-0.5 px-2 border-b border-slate-400  ">
+      <div className="flex justify-start py-0.38 px-1.0    ">
         <span className="">{"Home" + pathname}</span>
       </div>
     </div>

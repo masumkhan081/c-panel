@@ -12,14 +12,14 @@ export default function CustomInput({
 }) {
   return (
     <div className="flex rounded-md border border-slate-300">
-      <span className="bg-slate-200 py-0.25 px-0.5 border-r rounded-r-sm border-slate-300">
+      {startIcon && <span className="bg-slate-200 py-0.25 px-0.5 border-r rounded-r-sm border-slate-300">
         {startIcon}
-      </span>
+      </span>}
       <input
         type={type}
         required={true}
         placeholder={ph}
-        className="flex-grow py-1 px-0.25 outline-blue-300 rounded-md"
+        className="flex-grow py-0.5 px-0.38 outline-blue-300 rounded-md"
         value={value}
         onChange={afterChange}
       ></input>
