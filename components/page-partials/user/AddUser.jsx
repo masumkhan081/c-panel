@@ -68,7 +68,7 @@ export default function AddUser() {
           />
         </div>
 
-        <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5 items-center">
+        <div className="grid items-end sm:grid-cols-2 grid-cols-1 gap-1.5  ">
           <div className="flex flex-col gap-2">
             <label>Contact No</label>
             <CustomInput
@@ -78,14 +78,11 @@ export default function AddUser() {
             />
           </div>
 
-          <div className="flex items-center">
-            <span className="px-0.5  text-base  rounded-md py-0.25">Role</span>
-            <CustomSelect
-              bg="light"
-              options={["Admin", "Manager", "Assistant Manager"]}
-              ph={"Select Role"}
-            />
-          </div>
+          <CustomSelect
+            label="Select Role"
+            options={["Admin", "Manager", "Assistant Manager"]}
+            ph={""}
+          />
         </div>
 
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
@@ -124,16 +121,16 @@ export default function AddUser() {
           </div>
         </div>
 
-        <hr className=""/>
+        <hr className="" />
 
         <div className="flex justify-between my-2">
           <CustomButton
-            startIcon={<Ban  className="w-5 h-5"/>}
+            startIcon={<Ban className="w-5 h-5" />}
             txt={"Reset"}
             style="gap-1 bg-red-600 text-wh px-0.75 text-base font-semibold  py-0.25 rounded-md w-fit "
           />
           <CustomButton
-            startIcon={<CheckCheck className="w-5 h-5"/>}
+            startIcon={<CheckCheck className="w-5 h-5" />}
             txt={"Submit"}
             style="gap-1 bg-blue-700 text-wh px-0.75 text-base font-semibold  py-0.25 rounded-md w-fit "
           />

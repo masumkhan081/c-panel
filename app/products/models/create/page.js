@@ -1,7 +1,10 @@
+import AddModel from '@/components/page-partials/product-model/AddModel'
 import React from 'react'
 
 export default function page() {
   return (
-    <div>page-model-create</div>
+    <div className="bg-slate-200 w-full h-full overflow-y-scroll flex flex-col justify-center">
+      <AddModel />
+    </div>
   )
 }

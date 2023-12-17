@@ -1,7 +1,10 @@
-import React from 'react'
+import AddProduct from "@/components/page-partials/product/AddProduct";
+import React from "react";
 
 export default function page() {
   return (
-    <div>products-create</div>
-  )
+    <div className="bg-slate-200 w-full h-full overflow-y-scroll flex flex-col justify-center">
+      <AddProduct />
+    </div>
+  );
 }
