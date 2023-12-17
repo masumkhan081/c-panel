@@ -216,13 +216,19 @@ const sidenav = [
     childs: [
       {
         id: 1301,
-        label: "Add Stock",
+        label: "Stock (Barcode)",
         icon: <Settings2 />,
-        to: "/stocks/create",
+        to: "/stocks/add-barcode",
       },
       {
         id: 1302,
-        label: "Manage Stocks",
+        label: "Stock (Bulk)",
+        icon: <Settings2 />,
+        to: "/stocks/add-bulk",
+      },
+      {
+        id: 1303,
+        label: "View Stocks",
         icon: <Settings2 />,
         to: "/stocks",
       },
