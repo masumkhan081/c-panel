@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div>page-groups</div>
+    <div className="bg-slate-200   w-full  h-full overflow-y-scroll  ">page-groups</div>
   )
 }

@@ -19,35 +19,33 @@ export default function SideNav() {
 
   const cmn_icn_class = "w-7 h-7 rounded-full border border-red-400";
   const widthControl = () =>
-    isSideNavFolded
-      ? "w-4.0 flex sm:relative absolute flex-col justify-between gap-4 "
-      : "w-16.0";
+    isSideNavFolded ? "w-4.0 flex flex-col justify-between gap-4 " : "w-16.0";
   const visibilityControl = () =>
     isSideNavVisible
-      ? "block flex sm:relative absolute flex-col justify-between gap-4  "
+      ? "block flex  flex-col justify-between gap-4  "
       : "hidden";
 
   const expansionStatus = (key) => (expansion[key] ? " block" : " hidden");
 
   const [topSpace, setTopSpace] = useState(0);
 
-  const adjustTop=()=>"top-[100px]"
+  const adjustTop = () => "top-[100px]";
 
   return (
     <div
-      className={` ${widthControl()} ${visibilityControl()} min-h-screen max-h-screen  bg-slate-800 `}
+      className={` ${widthControl()} ${visibilityControl()} min-h-screen max-h-screen bg-slate-800   `}
     >
-      <div className="bg-slate-900 py-0.125   rounded-md  w-full flex justify-center">
+      <div className="bg-slate-950 py-0.125 sm:flex hidden  rounded-md  w-full  justify-center">
         <Image src={brand} className="w-7.0 h-4.0  overflow-hidden" />
       </div>
 
-      <ul className="flex-grow px-1  flex flex-col  justify-between gap-4 overflow-y-scroll overflow-x-hidden">
+      <ul className="flex-grow px-1 py-1.0 flex flex-col justify-between gap-4 overflow-y-scroll overflow-x-hidden">
         {sidenav.map((navItem) => {
           return (
             <li className="flex flex-col w-full  " key={navItem.id}>
               <Link
                 // txt={navItem.label}
-                href={navItem.sub?"":navItem.to}
+                href={navItem.sub ? "" : navItem.to}
                 onMouseOver={(e) => setTopSpace(e.target.offsetTop)}
                 onClick={() =>
                   dispatch(
@@ -57,11 +55,11 @@ export default function SideNav() {
                     })
                   )
                 }
-                className="bg-slate-900 text-slate-200 font-serif w-full flex justify-between items-center rounded-md border border-slate-500 px-2 py-0.25"
+                className="bg-slate-950 bg-opacity-80 shadow-sm text-slate-100 font-sans font-semibold w-full flex gap-3 justify-between items-center rounded-md border border-slate-700 px-2 py-0.25"
               >
                 {navItem.icon}
                 {!isSideNavFolded && (
-                  <span className="flex-grow text-center">{navItem.label}</span>
+                  <span className="flex-grow text-start">{navItem.label}</span>
                 )}
                 {!isSideNavFolded && navItem.sub && (
                   <ChevronRight
@@ -74,7 +72,7 @@ export default function SideNav() {
 
               {navItem.sub && (
                 <ul
-                  className={`bg-slate-800 pt-4 space-y-2 w-full  ${expansionStatus(
+                  className={`bg-slate-800 pt-3 space-y-2 w-full  ${expansionStatus(
                     navItem.label
                   )}`}
                 >
@@ -83,7 +81,7 @@ export default function SideNav() {
                       <li key={item.id}>
                         <Link
                           href={item.to}
-                          className="bg-slate-800 text-slate-100 font-mono w-full flex justify-between items-center rounded-md border border-slate-600 px-2 py-0.25"
+                          className="bg-slate-900 bg-opacity-60 text-slate-100 font-mono w-full flex justify-between items-center rounded-md border border-slate-600 px-2 py-0.125"
                         >
                           {item.icon}
                           {!isSideNavFolded && (
@@ -100,7 +98,7 @@ export default function SideNav() {
             </li>
           );
         })}
-
+        {/*
         <div>
           <CustomButton
             id="pokath"
@@ -120,31 +118,32 @@ export default function SideNav() {
             txt={isSideNavFolded ? "--" : " many many text"}
             style="border-2 border-teal-600"
           />
-          {/* {isSideNavFolded ? (
+           {isSideNavFolded ? (
             <div
               className={`block absolute z-10 left-[120px] ${adjustTop()} border rounded-md bg-wh border-yellow-600 w-38.0 h-25.0`}
             >
               <span>obj-modal</span>
             </div>
-          ) : null} */}
+          ) : null} 
         </div>
+*/}
       </ul>
 
       <div>
         <CustomButton
           endIcon={
-            isSideNavFolded ? (
-              <ChevronRight className="text-slate-200" />
-            ) : (
-              <ChevronLeft className="text-slate-200" />
-            )
+            <ChevronRight
+              className={`${
+                isSideNavFolded ? " rotate-0 " : "rotate-180"
+              } w-7 h-7 text-slate-200`}
+            />
           }
           afterClick={() =>
             dispatch(
               setSideNavFoldability({ isSideNavFolded: !isSideNavFolded })
             )
           }
-          style="bg-slate-900 py-0.75 px-0.25  rounded-md  w-full flex justify-end"
+          style="bg-slate-950 py-0.5 px-0.25  rounded-md  w-full sm:flex hidden justify-center"
         />
       </div>
     </div>

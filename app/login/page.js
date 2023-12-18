@@ -3,7 +3,7 @@ import React from "react";
 
 export default function page() {
   return (
-    <div className="bg_sl_1 w-full min-h-screen flex flex-col justify-center items-center">
+    <div className="bg-slate-200   w-full  h-full overflow-y-scroll  ">
       <Login />
     </div>
   );

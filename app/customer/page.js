@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 export default function page() {
   return (
-    <div>page-customer</div>
-  )
+    <div className="bg-slate-200   w-full  h-full overflow-y-scroll  "></div>
+  );
 }

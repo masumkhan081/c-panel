@@ -1,6 +1,10 @@
-import AddUserRole from '@/components/page-partials/user-role/AddUserRole'
-import React from 'react'
+import AddUserRole from "@/components/page-partials/user-role/AddUserRole";
+import React from "react";
 
 export default function page() {
-  return <AddUserRole/>
+  return (
+    <div className="bg-slate-200   w-full  h-full overflow-y-scroll  ">
+      <AddUserRole />
+    </div>
+  );
 }
