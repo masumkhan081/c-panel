@@ -43,20 +43,16 @@ export default function AddUser() {
             />
           </div>
         </div>
-        <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
+        <div className="grid items-end sm:grid-cols-2 grid-cols-1 gap-1.5 mt-1">
           <div className="flex flex-col gap-2">
-            <label>NID</label>
-            <CustomInput type={"text"} ph={"Enter NID"} required={true} />
+            <label>Email</label>
+            <CustomInput type={"email"} ph={"Enter Email"} required={true} />
           </div>
-
-          <div className="flex flex-col gap-2">
-            <label>Bank Account</label>
-            <CustomInput
-              type={"text"}
-              ph={"Enter bank account"}
-              required={true}
-            />
-          </div>
+          <CustomSelect
+            label="Select Role"
+            options={["Admin", "Manager", "Assistant Manager"]}
+            ph={""}
+          />
         </div>
 
         <div className="flex flex-col gap-2">
@@ -77,18 +73,20 @@ export default function AddUser() {
               required={true}
             />
           </div>
-
-          <CustomSelect
-            label="Select Role"
-            options={["Admin", "Manager", "Assistant Manager"]}
-            ph={""}
-          />
+          <div className="flex flex-col gap-2">
+            <label>Alternative Contact</label>
+            <CustomInput
+              type={"text"}
+              ph={"Enter another contact"}
+              required={true}
+            />
+          </div>
         </div>
 
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
           <div className="flex flex-col gap-2">
-            <label>Email</label>
-            <CustomInput type={"email"} ph={"Enter Email"} required={true} />
+            <label>NID</label>
+            <CustomInput type={"text"} ph={"Enter NID"} required={true} />
           </div>
 
           <div className="flex flex-col gap-2">
@@ -122,6 +120,128 @@ export default function AddUser() {
         </div>
 
         <hr className="" />
+
+        {/*   start ----  BANK INFO   */}
+
+        <div className="flex flex-col gap-2 ">
+          <EnhancedText
+            kind={"two"}
+            color="text-slate-800 py-0.5 border-b border-slate-300 mb-2"
+          >
+            Bank Information
+          </EnhancedText>
+          <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
+            <div className="flex flex-col gap-2">
+              <label>Account Name</label>
+              <CustomInput
+                type={"text"}
+                ph={"Enter account name"}
+                required={true}
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label>Account Number</label>
+              <CustomInput
+                type={"text"}
+                ph={"Enter account number"}
+                required={true}
+              />
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
+            <div className="flex flex-col gap-2">
+              <label>Bank Name</label>
+              <CustomInput
+                type={"text"}
+                ph={"Enter bank name"}
+                required={true}
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label>Branch Name</label>
+              <CustomInput
+                type={"text"}
+                ph={"Enter branch name"}
+                required={true}
+              />
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
+            <div className="flex flex-col gap-2">
+              <label>SWIFT code</label>
+              <CustomInput
+                type={"text"}
+                ph={"Enter swift code"}
+                required={true}
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label>Routing Number</label>
+              <CustomInput
+                type={"text"}
+                ph={"Enter routing number"}
+                required={true}
+              />
+            </div>
+          </div>
+          <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
+            <div className="flex flex-col gap-2">
+              <label>Mobile Number</label>
+              <CustomInput
+                type={"text"}
+                ph={"Enter mobile number"}
+                required={true}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/*   ----- end ---- BANK INFO ---- start --- payment syst   */}
+
+        <div className="flex flex-col gap-2 ">
+          <EnhancedText
+            kind={"two"}
+            color="text-slate-800 py-0.5 border-b border-slate-300 mb-2"
+          >
+            Payment Information
+          </EnhancedText>
+          <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
+            <div className="flex flex-col gap-2">
+              <label>Bkash Number</label>
+              <CustomInput
+                type={"text"}
+                ph={"Enter account name"}
+                required={true}
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label>Nagad Number</label>
+              <CustomInput
+                type={"text"}
+                ph={"Enter account number"}
+                required={true}
+              />
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
+            <div className="flex flex-col gap-2">
+              <label>Rocket Number</label>
+              <CustomInput
+                type={"text"}
+                ph={"Enter bank name"}
+                required={true}
+              />
+            </div>
+          </div>
+        </div>
+        {/* end--- payment syst */}
 
         <div className="flex justify-between my-2">
           <CustomButton

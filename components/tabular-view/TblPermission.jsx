@@ -28,7 +28,7 @@ export default function TblPermission() {
                 <tr
                   key={ind}
                    
-                  className="text-center font-normal mb-1 capitalize border hover:bg-slate-300 rounded-md"
+                  className="mb-1 text-center font-normal capitalize border hover:bg-slate-300 rounded-md"
                 >
                   <td className="capitalize py-0.25">
                     {item.replace("_", " ")}

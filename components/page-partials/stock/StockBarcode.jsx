@@ -28,23 +28,23 @@ export default function StockBarcode({ actOn = "Supplier", useForEdit }) {
             <label>Stocks</label>
             <CustomInput
               type={"text"}
-              ph={"Enter first name"}
+              ph={"Enter purchase amount"}
               required={true}
             />
           </div>
 
           <div className="flex flex-col gap-2">
-            <label>hPurchase Price</label>
+            <label>Purchase Price</label>
             <CustomInput
               type={"text"}
-              ph={"Enter first name"}
+              ph={"Enter purchase price"}
               required={true}
             />
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
-          <label>Description</label>
+          <label>Barcodes</label>
           <textarea
             rows={3}
             placeholder={"Scan items with barcodes"}
