@@ -121,25 +121,37 @@ export default function AddCustomer({ actOn, useForEdit }) {
                 />
               </div>
             </div>
-            <CustomButton
-              style=" gap-2 bg-slate-200 text-slate-800 px-1.0 text-base  py-0.25 rounded-md w-fit   "
-              startIcon={
-                addBusinessCont == false ? (
-                  <Plus className="w-5 h-5" />
-                ) : (
-                  <BookmarkX className="w-5 h-5" />
-                )
-              }
-              txt={
-                addBusinessCont == false
-                  ? "Add Contact Person"
-                  : "Close Contact Panel"
-              }
-              afterClick={() => {
-                setContactAddition(!addBusinessCont);
-              }}
-            />
           </>
+        )}
+
+        <div className="flex flex-col gap-2">
+          <label>Shipping Address</label>
+          <CustomInput
+            type={"text"}
+            ph={"Enter shipping address name"}
+            required={true}
+          />
+        </div>
+
+        {selectedCustType == "Business" && (
+          <CustomButton
+            style=" gap-2 bg-slate-200 text-slate-800 px-1.0 text-base  py-0.25 rounded-md w-[220px]   "
+            startIcon={
+              addBusinessCont == false ? (
+                <Plus className="w-5 h-5" />
+              ) : (
+                <BookmarkX className="w-5 h-5" />
+              )
+            }
+            txt={
+              addBusinessCont == false
+                ? "Add Contact Person"
+                : "Close Contact Panel"
+            }
+            afterClick={() => {
+              setContactAddition(!addBusinessCont);
+            }}
+          />
         )}
 
         {addBusinessCont && selectedCustType == "Business" && (
@@ -290,47 +302,51 @@ export default function AddCustomer({ actOn, useForEdit }) {
 
         {isMoreInfo && (
           <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5 my-2 border border-slate-400 rounded-md py-0.5 px-1.0 pb-3  ">
-            
-              <div className="col-span-1 flex flex-col gap-2">
-                <label>Opening Balance</label>
-                <CustomInput
-                  type={"text"}
-                  ph={"Enter opening balance"}
-                  required={true}
-                />
-              </div>
+            <div className="col-span-1 flex flex-col gap-2">
+              <label>Opening Balance</label>
+              <CustomInput
+                type={"text"}
+                ph={"Enter opening balance"}
+                required={true}
+              />
+            </div>
 
-              <div className="col-span-1 flex flex-col gap-2">
-                <label>
-                  Credit Limit{" "}
-                  <span className="w-full text-sm text-slate-500 ms-2 font-bold">
-                    Keep blank for no limit
-                  </span>
-                </label>
-                <CustomInput
-                  type={"text"}
-                  ph={"Enter credit limit"}
-                  required={true}
-                />
-              </div>
-             
+            <div className="col-span-1 flex flex-col gap-2">
+              <label>
+                Credit Limit{" "}
+                <span className="w-full text-sm text-slate-500 ms-2 font-bold">
+                  Keep blank for no limit
+                </span>
+              </label>
+              <CustomInput
+                type={"text"}
+                ph={"Enter credit limit"}
+                required={true}
+              />
+            </div>
           </div>
         )}
 
         <div className="flex justify-between mt-0.5">
           <CustomButton
-            startIcon={isMoreInfo?<X className="w-5 h-5 "/>:<BadgeInfo className="w-5 h-5" />}
+            startIcon={
+              isMoreInfo ? (
+                <X className="w-5 h-5 " />
+              ) : (
+                <BadgeInfo className="w-5 h-5" />
+              )
+            }
             afterClick={(e) => {
               e.preventDefault();
               setMoreInfo(!isMoreInfo);
             }}
-            txt={isMoreInfo?"Close More Info":"More Info"}
-            style="gap-2 bg-slate-200 text-slate-800 px-1.0 text-base  py-0.25 rounded-md w-fit  "
+            txt={isMoreInfo ? "Close More Info" : "More Info"}
+            style="gap-2 bg-slate-200 text-slate-800 px-1.0 text-base  py-0.25 rounded-md w-[220px]  "
           />
           <CustomButton
             endIcon={<SendHorizontal className="w-5 h-5" />}
             txt={"Submit"}
-            style="gap-2 bg-blue-800 text-wh px-1.5 text-base font-bold py-0.25 rounded-md w-fit  "
+            style="gap-2 bg-blue-800 text-wh px-1.5 text-base font-bold py-0.25 rounded-md w-[220px]  "
           />
         </div>
       </form>
