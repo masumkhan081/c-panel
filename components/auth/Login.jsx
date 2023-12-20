@@ -38,7 +38,7 @@ export default function Login() {
   }
 
   return (
-    <div className="h-26.0 max-w-35.0 bg-wh rounded-md border border-slate-300 flex ">
+    <div className="h-26.0 max-w-35.0 bg-wh rounded-md   border border-slate-300 flex ">
       <form className=" flex flex-col gap-1.5 px-3.0 py-3.5 h-full rounded-s-md">
         <EnhancedText kind="one" color="text-pr">
           Login

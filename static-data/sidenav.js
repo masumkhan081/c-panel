@@ -122,6 +122,38 @@ const sidenav = [
     ],
   },
   {
+    id: 17,
+    label: "Warehouses",
+    icon: <Warehouse className="w-5 h-5" />,
+    sub: true,
+    childs: [
+      {
+        id: 1701,
+        label: "Add Warehouse",
+        icon: <PackagePlus className="w-5 h-5" />,
+        to: "/warehouses/add-warehouse",
+      },
+      {
+        id: 1702,
+        label: "Add Shelf",
+        icon: <ListPlus className="w-5 h-5" />,
+        to: "/warehouses/add-shelf",
+      },
+      {
+        id: 1703,
+        label: "manage Warehouses",
+        icon: <Table className="w-5 h-5" />,
+        to: "/warehouses",
+      },
+      {
+        id: 1704,
+        label: "manage Shefls",
+        icon: <LayoutPanelLeft className="w-5 h-5" />,
+        to: "/warehouses/shelves",
+      },
+    ],
+  },
+  {
     id: 6,
     label: "Service",
     icon: <Wrench className="w-5 h-5" />,
@@ -289,6 +321,26 @@ const sidenav = [
     ],
   },
   {
+    id: 16,
+    label: "Reports",
+    icon: <FileCode2 className="w-5 h-5" />,
+    sub: true,
+    childs: [
+      {
+        id: 1601,
+        label: "Sale Report",
+        icon: <PercentSquare className="w-5 h-5" />,
+        to: "/stocks/add-barcode",
+      },
+      {
+        id: 1602,
+        label: "Purchase Reports",
+        icon: <WalletCards className="w-5 h-5" />,
+        to: "/stocks/add-bulk",
+      },
+    ],
+  },
+  {
     id: 15,
     label: "Settings",
     icon: <Settings className="w-5 h-5" />,
@@ -320,59 +372,8 @@ const sidenav = [
       },
     ],
   },
-  {
-    id: 16,
-    label: "Reports",
-    icon: <FileCode2 className="w-5 h-5" />,
-    sub: true,
-    childs: [
-      {
-        id: 1601,
-        label: "Sale Report",
-        icon: <PercentSquare className="w-5 h-5" />,
-        to: "/stocks/add-barcode",
-      },
-      {
-        id: 1602,
-        label: "Purchase Reports",
-        icon: <WalletCards className="w-5 h-5" />,
-        to: "/stocks/add-bulk",
-      },
-    ],
-  },
 
-  {
-    id: 17,
-    label: "Warehouses",
-    icon: <Warehouse className="w-5 h-5" />,
-    sub: true,
-    childs: [
-      {
-        id: 1701,
-        label: "Add Warehouse",
-        icon: <PackagePlus className="w-5 h-5" />,
-        to: "/warehouses/add-warehouse",
-      },
-      {
-        id: 1702,
-        label: "Add Shelf",
-        icon: <ListPlus className="w-5 h-5" />,
-        to: "/warehouses/add-shelf",
-      },
-      {
-        id: 1703,
-        label: "manage Warehouses",
-        icon: <Table className="w-5 h-5" />,
-        to: "/warehouses",
-      },
-      {
-        id: 1704,
-        label: "manage Shefls",
-        icon: <LayoutPanelLeft className="w-5 h-5" />,
-        to: "/warehouses/shelves",
-      },
-    ],
-  },
+ 
 ];
 
 export default sidenav;

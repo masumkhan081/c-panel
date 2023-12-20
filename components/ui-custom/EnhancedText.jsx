@@ -11,5 +11,5 @@ export default function EnhancedText({ children, kind, color }) {
     mute: "text-sm  font-normal",
   };
 
-  return <p className={` ${style[kind]} ${color} flex gap-2`}>{children}</p>;
+  return <p className={` ${style[kind]} ${color} flex gap-2 items-center`}>{children}</p>;
 }

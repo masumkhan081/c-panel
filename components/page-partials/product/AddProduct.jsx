@@ -3,6 +3,7 @@ import CustomInput from "@/components/ui-custom/CustomInput";
 import CustomSelect from "@/components/ui-custom/CustomSelect";
 import EnhancedText from "@/components/ui-custom/EnhancedText";
 import productGroups from "@/static-data/product-groups";
+import warrenties from "@/static-data/warrenties";
 import { CheckCheck } from "lucide-react";
 import React from "react";
 
@@ -22,22 +23,32 @@ export default function AddProduct({ actOn, useForEdit }) {
           options={productGroups}
         />
 
-        <div className="grid grid-cols-7  gap-1.5">
-          <div className="md:col-span-3 sm:col-span-4 col-span-7 flex flex-col gap-2">
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
+          <div className="flex flex-col gap-2">
             <label>Product Name</label>
             <CustomInput
               type={"text"}
-              ph={"Enter first name"}
+              ph={"Enter product name"}
               required={true}
             />
           </div>
 
-          <div className="md:col-span-2 sm:col-span-3 col-span-7 col flex flex-col gap-2">
+          <div className="flex flex-col gap-2">
             <label>Stock Notify</label>
 
             <CustomInput type={"number"} required={true} />
           </div>
-          <div className="md:col-span-2 sm:col-span-3 col-span-7 flex flex-col gap-2">
+        </div>
+
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
+          <div className="flex flex-col gap-2">
+            <label>Warrenty</label>
+            <CustomSelect
+              label={"Enter Warrenty duration"}
+              options={warrenties}
+            />
+          </div>
+          <div className="  flex flex-col gap-2">
             <label>Sale Price</label>
             <CustomInput type={"number"} required={true} />
           </div>
@@ -47,8 +58,8 @@ export default function AddProduct({ actOn, useForEdit }) {
           <label>Description</label>
           <textarea
             rows={4}
-            placeholder={"Enter address"}
-            className="px-0.5 py-0.38 border"
+            placeholder={"Enter details"}
+            className="px-0.5 py-0.38 border rounded-md"
           />
         </div>
 
