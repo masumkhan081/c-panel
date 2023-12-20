@@ -24,7 +24,7 @@ const CustomSelect = ({ options, value, onChange, bg, ph, icon,label }) => {
   };
 
   const styles = {
-    light: "bg-slate-300 text-black border border-slate-500",
+    light: "bg-slate-200 text-black border border-slate-400",
     blue: "bg-blue-700 text-white",
   };
 
@@ -34,7 +34,7 @@ const CustomSelect = ({ options, value, onChange, bg, ph, icon,label }) => {
         className={`py-1 px-1.0 min-w-[80px] border rounded-md capitalize cursor-pointer flex justify-between items-center ${styles[bg]}`}
         onClick={toggleDropdown}
       >
-      <span className={bg=="blue"?"bg-blue-900 text-wh font-semibold px-0.5 h-full rounded-md py-0.125":"bg-slate-200 text-black font-semibold px-0.5  rounded-md py-0.125 h-full"}>{label}</span>
+      <span className={bg=="blue"?"bg-blue-900 text-wh font-semibold px-0.5 h-full rounded-md py-0.125":"bg-slate-300 text-black font-semibold px-0.5  rounded-md py-0.125 h-full"}>{label}</span>
         {icon && icon}
         <span>{value ? value : ph}</span>
         <ChevronDown className="w-[1.2rem] h-[1.2rem] ms-1" />

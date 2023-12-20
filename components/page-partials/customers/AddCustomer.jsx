@@ -122,7 +122,7 @@ export default function AddCustomer({ actOn, useForEdit }) {
               </div>
             </div>
             <CustomButton
-              style=" flex gap-2 bg-slate-300 text-slate-700 py-0.25 px-0.5 w-fit rounded-md "
+              style=" gap-2 bg-slate-200 text-slate-800 px-1.0 text-base  py-0.25 rounded-md w-fit   "
               startIcon={
                 addBusinessCont == false ? (
                   <Plus className="w-5 h-5" />
@@ -325,7 +325,7 @@ export default function AddCustomer({ actOn, useForEdit }) {
               setMoreInfo(!isMoreInfo);
             }}
             txt={isMoreInfo?"Close More Info":"More Info"}
-            style="gap-2 bg-slate-200 text-slate-800 px-1.5 text-base  py-0.25 rounded-md w-fit  "
+            style="gap-2 bg-slate-200 text-slate-800 px-1.0 text-base  py-0.25 rounded-md w-fit  "
           />
           <CustomButton
             endIcon={<SendHorizontal className="w-5 h-5" />}
