@@ -22,7 +22,7 @@ export default function AddCustomer({ actOn, useForEdit }) {
     <div className="  m-1.25 bg-wh border border-slate-400 rounded-md px-1.0">
       <EnhancedText
         kind={"two"}
-        color="text-slate-800 py-0.5 border-b border-slate-300"
+        color="text-slate-800 py-0.5 border-b border-slate-300 font-mono justify-center"
       >
         Add Customer
       </EnhancedText>
@@ -185,6 +185,25 @@ export default function AddCustomer({ actOn, useForEdit }) {
               </div>
               <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
                 <div className="flex flex-col gap-2">
+                  <label>Department</label>
+                  <CustomInput
+                    type={"text"}
+                    ph={"Enter department"}
+                    required={true}
+                  />
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <label>Designation</label>
+                  <CustomInput
+                    type={"text"}
+                    ph={"Enter designation"}
+                    required={true}
+                  />
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
+                <div className="flex flex-col gap-2">
                   <label>Contact No</label>
                   <CustomInput
                     type={"text"}
@@ -232,6 +251,25 @@ export default function AddCustomer({ actOn, useForEdit }) {
               </div>
               <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
                 <div className="flex flex-col gap-2">
+                  <label>Department</label>
+                  <CustomInput
+                    type={"text"}
+                    ph={"Enter department"}
+                    required={true}
+                  />
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <label>Designation</label>
+                  <CustomInput
+                    type={"text"}
+                    ph={"Enter designation"}
+                    required={true}
+                  />
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
+                <div className="flex flex-col gap-2">
                   <label>Contact No</label>
                   <CustomInput
                     type={"text"}
@@ -273,6 +311,25 @@ export default function AddCustomer({ actOn, useForEdit }) {
                   <CustomInput
                     type={"text"}
                     ph={"Enter last name"}
+                    required={true}
+                  />
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
+                <div className="flex flex-col gap-2">
+                  <label>Department</label>
+                  <CustomInput
+                    type={"text"}
+                    ph={"Enter department"}
+                    required={true}
+                  />
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <label>Designation</label>
+                  <CustomInput
+                    type={"text"}
+                    ph={"Enter designation"}
                     required={true}
                   />
                 </div>

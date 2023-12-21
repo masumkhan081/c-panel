@@ -42,9 +42,9 @@ export default function AddProduct({ actOn, useForEdit }) {
 
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
           <div className="flex flex-col gap-2">
-            <label>Warrenty</label>
+            <label>warranty</label>
             <CustomSelect
-              label={"Enter Warrenty duration"}
+              label={"Enter warranty duration"}
               options={warrenties}
             />
           </div>

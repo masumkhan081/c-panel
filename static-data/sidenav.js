@@ -31,6 +31,9 @@ import {
   Table,
   ListPlus,
   Settings,
+  ScrollText,
+  Undo2,
+  SendToBack,
 } from "lucide-react";
 
 const sidenav = [
@@ -284,20 +287,83 @@ const sidenav = [
         id: 1301,
         label: "Add (Barcode)",
         icon: <Barcode className="w-5 h-5" />,
-        to: "/stocks/add-barcode",
+        to: "/purchases/add-barcode",
       },
       {
         id: 1302,
         label: "Add (Bulk)",
         icon: <CopyPlus className="w-5 h-5" />,
-        to: "/stocks/add-bulk",
+        to: "/purchases/add-bulk",
       },
       {
         id: 1303,
         label: "View Stocks",
         icon: <ActivitySquare className="w-5 h-5" />,
-        to: "/stocks",
+        to: "/purchases/stocks",
       },
+      {
+        id: 1304,
+        label: "Purchase Return",
+        icon: <ActivitySquare className="w-5 h-5" />,
+        to: "/purchases/purchase-return",
+      },
+    ],
+  },
+  {
+    id: 18,
+    label: "Sale",
+    icon: <ShoppingCart className="w-5 h-5" />,
+    sub: true,
+    childs: [
+      {
+        id: 1801,
+        label: "Add Sale",
+        icon: <ListPlus className="w-5 h-5" />,
+        to: "/sales/add-sale",
+      },
+      {
+        id: 1802,
+        label: "List of Sale",
+        icon: <ScrollText className="w-5 h-5" />,
+        to: "/sales",
+      },
+      {
+        id: 1803,
+        label: "Add Qoutation",
+        icon: <ListPlus className="w-5 h-5" />,
+        to: "/sales/add-quotation",
+      },
+      {
+        id: 1804,
+        label: "List of quotation",
+        icon: <ScrollText className="w-5 h-5" />,
+        to: "/sales/quotations",
+      },
+      {
+        id: 1805,
+        label: "Add Draft",
+        icon: <ListPlus className="w-5 h-5" />,
+        to: "/sales/add-draft",
+      },
+      {
+        id: 1806,
+        label: "List of drafts",
+        icon: <ScrollText className="w-5 h-5" />,
+        to: "/sales/drafts",
+      },
+      {
+        id: 1807,
+        label: "Sale return",
+        icon: <Undo2 className="w-5 h-5" />,
+        to: "/sales/sale-return",
+      },
+      {
+        id: 1808,
+        label: "Warranty",
+        icon: <SendToBack className="w-5 h-5" />,
+        to: "/sales/warranty",
+      },
+      
     ],
   },
   {
@@ -310,13 +376,13 @@ const sidenav = [
         id: 1401,
         label: "Send SMS",
         icon: <MessageCircle className="w-5 h-5" />,
-        to: "/stocks/add-barcode",
+        to: "/marketting/send-sms",
       },
       {
         id: 1402,
         label: "Send Email",
         icon: <Send className="w-5 h-5" />,
-        to: "/stocks/add-bulk",
+        to: "/marketting/send-email",
       },
     ],
   },
@@ -330,13 +396,13 @@ const sidenav = [
         id: 1601,
         label: "Sale Report",
         icon: <PercentSquare className="w-5 h-5" />,
-        to: "/stocks/add-barcode",
+        to: "/reports/sale-report",
       },
       {
         id: 1602,
         label: "Purchase Reports",
         icon: <WalletCards className="w-5 h-5" />,
-        to: "/stocks/add-bulk",
+        to: "/reports/purchase-report",
       },
     ],
   },
@@ -350,30 +416,28 @@ const sidenav = [
         id: 1501,
         label: "SMTP settings",
         icon: <Barcode className="w-5 h-5" />,
-        to: "/stocks/add-barcode",
+        to: "/settings/smtp",
       },
       {
         id: 1502,
         label: "SMS settings",
         icon: <CopyPlus className="w-5 h-5" />,
-        to: "/stocks/add-bulk",
+        to: "/settings/sms",
       },
       {
         id: 1503,
         label: "SMS Template",
         icon: <ActivitySquare className="w-5 h-5" />,
-        to: "/stocks",
+        to: "/settings/sms-template",
       },
       {
         id: 1504,
-        label: "EMail Template",
+        label: "Email Template",
         icon: <ActivitySquare className="w-5 h-5" />,
-        to: "/stocks",
+        to: "/settings/email-template",
       },
     ],
   },
-
- 
 ];
 
 export default sidenav;
