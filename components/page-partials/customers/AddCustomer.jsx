@@ -183,6 +183,7 @@ export default function AddCustomer({ actOn, useForEdit }) {
                   />
                 </div>
               </div>
+              {/* not showing ...  */}
               <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
                 <div className="flex flex-col gap-2">
                   <label>Department</label>
