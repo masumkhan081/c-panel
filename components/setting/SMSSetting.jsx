@@ -14,7 +14,7 @@ export default function SMSSetting() {
     <div className="  m-1.25 bg-wh border border-slate-400 rounded-md px-1.0">
       <EnhancedText
         kind={"two"}
-        color="text-slate-800 py-0.5 border-b border-slate-300"
+        color="text-slate-800 py-0.5 border-b border-slate-300 justify-center"
       >
         <span className="font-bold">Settings:</span> SMS
       </EnhancedText>

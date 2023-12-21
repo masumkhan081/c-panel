@@ -3,7 +3,7 @@ import React from "react";
 import EnhancedText from "../ui-custom/EnhancedText";
 import CustomInput from "../ui-custom/CustomInput";
 import CustomButton from "../ui-custom/CustomButton";
-import { SendHorizonal } from "lucide-react";
+import { ListRestart, SendHorizonal } from "lucide-react";
 
 export default function SMTPSetting() {
   return (
@@ -62,11 +62,21 @@ export default function SMTPSetting() {
             <CustomInput type={"text"} ph={"Enter name"} required={true} />
           </div>
         </div>
-        <CustomButton
-          txt={"Submit"}
-          endIcon={<SendHorizonal className="w-5 h-5" />}
-          style="gap-2 bg-blue-800 text-wh px-1.0 text-lg font-semibold  py-0.25 rounded-md w-fit "
-        />
+        <div className="flex justify-between mt-1.0">
+          <CustomButton
+            startIcon={<ListRestart className="w-5 h-5 " />}
+            afterClick={(e) => {
+              e.preventDefault();
+            }}
+            txt={"Reset"}
+            style="gap-2 bg-slate-200 text-slate-800 px-1.0 text-base  py-0.25 rounded-md w-[220px]  "
+          />
+          <CustomButton
+            txt={"Submit"}
+            endIcon={<SendHorizonal className="w-5 h-5" />}
+            style="gap-2 bg-blue-800 text-wh px-1.0 text-lg font-semibold  py-0.25 rounded-md w-fit "
+          />
+        </div>
       </form>
     </div>
   );
