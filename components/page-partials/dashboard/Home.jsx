@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import EnhancedText from "../../ui-custom/EnhancedText";
 import Link from "next/link";

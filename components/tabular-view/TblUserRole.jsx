@@ -1,3 +1,4 @@
+"use client"
 import { tDataRoles } from "@/static-data/table-data";
 import { tHeadRoles } from "@/static-data/table-headers";
 import React, { useState } from "react";

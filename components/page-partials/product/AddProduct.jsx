@@ -1,3 +1,5 @@
+"use client"
+
 import CustomButton from "@/components/ui-custom/CustomButton";
 import CustomInput from "@/components/ui-custom/CustomInput";
 import CustomSelect from "@/components/ui-custom/CustomSelect";
