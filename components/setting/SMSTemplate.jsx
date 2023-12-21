@@ -2,7 +2,7 @@
 import React from "react";
 import EnhancedText from "../ui-custom/EnhancedText";
 
-export default function SMTPTemplate() {
+export default function SMSTemplate() {
   return (
     <div className="  m-1.25 bg-wh border border-slate-400 rounded-md px-1.0">
       <EnhancedText
