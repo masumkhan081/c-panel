@@ -12,7 +12,7 @@ export default function SMTPSetting() {
         kind={"two"}
         color="text-slate-800 py-0.5 border-b border-slate-300 justify-center"
       >
-        <span className="font-bold">Settings:</span> SMTP Settings
+        <span className="font-bold">Settings:</span> SMTP
       </EnhancedText>
 
       <form className="flex flex-col gap-3 text-sm my-4">
