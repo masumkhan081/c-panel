@@ -43,13 +43,15 @@ export default function PurchReturn() {
           </div>
         </div>
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5 ">
-        <div className="flex flex-col gap-2">
-            <label>Upload Documents <span className="w-full text-sm text-slate-500 ms-2 font-bold">
-                  (image,pdf)
-                </span></label>
+          <div className="flex flex-col gap-2">
+            <label>
+              Upload Documents{" "}
+              <span className="w-full text-sm text-slate-500 ms-2 font-bold">
+                (image,pdf)
+              </span>
+            </label>
             <CustomInput type="file" />
           </div>
-           
         </div>
 
         {/* <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">

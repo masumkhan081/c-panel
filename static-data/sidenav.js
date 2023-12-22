@@ -363,7 +363,46 @@ const sidenav = [
         icon: <SendToBack className="w-5 h-5" />,
         to: "/sales/warranty",
       },
-      
+    ],
+  },
+  {
+    id: 20,
+    label: "Expense",
+    icon: <CircleDollarSign className="w-5 h-5" />,
+    sub: true,
+    childs: [
+      {
+        id: 2001,
+        label: "Add expense",
+        icon: <MessageCircle className="w-5 h-5" />,
+        to: "/expenses/add-expense",
+      },
+      {
+        id: 2002,
+        label: "List of expenses",
+        icon: <Send className="w-5 h-5" />,
+        to: "/expenses",
+      },
+    ],
+  },
+  {
+    id: 19,
+    label: "Payment account",
+    icon: <CircleDollarSign className="w-5 h-5" />,
+    sub: true,
+    childs: [
+      {
+        id: 1901,
+        label: "Add payment account",
+        icon: <MessageCircle className="w-5 h-5" />,
+        to: "/payment-accounts/add-account",
+      },
+      {
+        id: 1902,
+        label: "Manage accounts",
+        icon: <Send className="w-5 h-5" />,
+        to: "/payment-accounts",
+      },
     ],
   },
   {
@@ -396,13 +435,43 @@ const sidenav = [
         id: 1601,
         label: "Sale Report",
         icon: <PercentSquare className="w-5 h-5" />,
-        to: "/reports/sale-report",
+        to: "/reports/sale",
       },
       {
         id: 1602,
         label: "Purchase Reports",
         icon: <WalletCards className="w-5 h-5" />,
-        to: "/reports/purchase-report",
+        to: "/reports/purchase",
+      },
+      {
+        id: 1603,
+        label: "Profit & Loss Statement",
+        icon: <WalletCards className="w-5 h-5" />,
+        to: "/reports/profit-and-loss",
+      },
+      {
+        id: 1604,
+        label: "Item/Product Report",
+        icon: <WalletCards className="w-5 h-5" />,
+        to: "/reports/product",
+      },
+      {
+        id: 1605,
+        label: "Supplier Report",
+        icon: <WalletCards className="w-5 h-5" />,
+        to: "/reports/supplier",
+      },
+      {
+        id: 1606,
+        label: "Custromer Report",
+        icon: <WalletCards className="w-5 h-5" />,
+        to: "/reports/customer",
+      },
+      {
+        id: 1607,
+        label: "Payment Report",
+        icon: <WalletCards className="w-5 h-5" />,
+        to: "/reports/payment",
       },
     ],
   },

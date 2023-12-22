@@ -1,81 +1,82 @@
 "use client";
 import CustomButton from "@/components/ui-custom/CustomButton";
 import CustomInput from "@/components/ui-custom/CustomInput";
+import CustomSelect from "@/components/ui-custom/CustomSelect";
 import EnhancedText from "@/components/ui-custom/EnhancedText";
 import { BookmarkX, Contact, Plus, SendHorizonal } from "lucide-react";
 import React, { useState } from "react";
 
 export default function AddSupplier({ actOn = "Supplier", useForEdit }) {
   const [addBusinessCont, setContactAddition] = useState(false);
-  const [isMoreInfo, setMoreInfo] = useState(false);
+  const [isAlsoCustomer, setIsAlsoCustomer] = useState("No");
 
   return (
     <div className="  m-1.25 bg-wh border border-slate-400 rounded-md px-1.0">
       <EnhancedText
         kind={"two"}
-        color="text-slate-800 py-0.5 border-b border-slate-300"
+        color="text-slate-800 font-mono py-0.5 border-b border-slate-300"
       >
         New {actOn}
       </EnhancedText>
 
       <form className="flex flex-col gap-3 text-sm my-4">
-        <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
-          <div className="flex flex-col gap-2">
-            <label>First Name</label>
-            <CustomInput
-              type={"text"}
-              ph={"Enter first name"}
-              required={true}
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5 items-center">
+          <div className="w-full">
+            <CustomSelect
+              options={["Yes", "No"]}
+              label={"Add as a customer too"}
+              value={isAlsoCustomer}
+              onChange={(option) => {
+                setIsAlsoCustomer(option);
+              }}
             />
           </div>
 
           <div className="flex flex-col gap-2">
-            <label>Last Name</label>
+            <label>Business Name</label>
             <CustomInput
               type={"text"}
-              ph={"Enter first name"}
+              ph={"Enter business name"}
+              required={true}
+            />
+          </div>
+        </div>
+
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
+          <div className="flex flex-col gap-2">
+            <label>Business Contact</label>
+            <CustomInput
+              type={"text"}
+              ph={"Enter business contact"}
+              required={true}
+              endButtonTxt={"Fetch"}
+              
+            />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label>Alternative Contact No</label>
+            <CustomInput
+              type={"text"}
+              ph={"Enter another contact no"}
               required={true}
             />
           </div>
         </div>
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
           <div className="flex flex-col gap-2">
-            <label>Address</label>
+            <label>Email</label>
+            <CustomInput
+              type={"email"}
+              ph={"Enter business email"}
+              required={true}
+            />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label>Business Address</label>
             <textarea
               rows={2}
               placeholder={"Enter address"}
               className="px-0.5 py-0.38 border rounded-md"
-            />
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <label>Company</label>
-            <CustomInput type={"text"} ph={"Enter company"} required={true} />
-          </div>
-        </div>
-
-        <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
-          <div className="flex flex-col gap-2">
-            <label>Contact No</label>
-            <CustomInput
-              type={"text"}
-              ph={"Enter contact no"}
-              required={true}
-            />
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <label>Email</label>
-            <CustomInput type={"email"} ph={"Enter email"} required={true} />
-          </div>
-        </div>
-        <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
-          <div className="flex flex-col gap-2">
-            <label>Alternative Contact</label>
-            <CustomInput
-              type={"text"}
-              ph={"Enter another contact"}
-              required={true}
             />
           </div>
         </div>
@@ -228,7 +229,7 @@ export default function AddSupplier({ actOn = "Supplier", useForEdit }) {
           </div>
         </div>
 
-        {addBusinessCont == false && (
+        {
           <CustomButton
             style=" gap-2 bg-slate-200 text-slate-800 px-1.0 text-base  py-0.25 rounded-md w-[220px]   "
             startIcon={
@@ -247,7 +248,7 @@ export default function AddSupplier({ actOn = "Supplier", useForEdit }) {
               setContactAddition(!addBusinessCont);
             }}
           />
-        )}
+        }
 
         {addBusinessCont && (
           <>
