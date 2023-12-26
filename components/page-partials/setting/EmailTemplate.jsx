@@ -15,7 +15,7 @@ export default function EmailTemplate() {
       >
         <span className="font-bold">Settings:</span> Email Template
       </EnhancedText>
-      <div className="flex flex-col gap-1.0 py-1.0">
+      {/* <div className="flex flex-col gap-1.0 py-1.0">
         <div className="flex flex-col gap-1 p-1.0 shadow-md rounded-md border border-slate-400">
           <label className="font-bold font-mono">Order Template</label>
           <Editor editorClassName="bg-slate-100 px-0.25 rounded-md leading-3 text-base" />
@@ -56,6 +56,7 @@ export default function EmailTemplate() {
             afterClick={(e) => {
               e.preventDefault();
             }}
+
             txt={"Reset"}
             style="gap-2 bg-slate-200 text-slate-800 px-1.0 text-base  py-0.25 rounded-md w-[220px]  "
           />
@@ -65,7 +66,7 @@ export default function EmailTemplate() {
             style="gap-2 bg-blue-800 text-wh px-1.0 text-lg font-semibold  py-0.25 rounded-md w-fit "
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

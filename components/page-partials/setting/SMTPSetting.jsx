@@ -6,6 +6,8 @@ import CustomButton from "../../ui-custom/CustomButton";
 import { ListRestart, SendHorizonal } from "lucide-react";
 
 export default function SMTPSetting() {
+
+  
   return (
     <div className="  m-1.25 bg-wh border border-slate-400 rounded-md px-1.0">
       <EnhancedText

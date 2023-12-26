@@ -2,8 +2,7 @@
 import CustomButton from "@/components/ui-custom/CustomButton";
 import CustomInput from "@/components/ui-custom/CustomInput";
 import CustomSelect from "@/components/ui-custom/CustomSelect";
-import EnhancedText from "@/components/ui-custom/EnhancedText";
-import productGroups from "../../../static-data/product-groups";
+import EnhancedText from "@/components/ui-custom/EnhancedText"; 
 import React, { useState } from "react";
 import {
   ArrowBigUp,
