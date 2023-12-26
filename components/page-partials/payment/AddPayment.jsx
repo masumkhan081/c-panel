@@ -32,7 +32,7 @@ export default function AddPayment({ actOn, useForEdit }) {
           <div className="flex flex-col gap-2">
             <CustomSelect
               label="Select Payment System"
-              options={["Bank", "Mobile"]}
+              options={["Bank", "Mobile", "Cash"]}
               value={selectedPaymentWay}
               onChange={(value) => setPaymentWay(value)}
               bg={"light"}
@@ -120,22 +120,21 @@ export default function AddPayment({ actOn, useForEdit }) {
         )}
         {selectedPaymentWay == "Mobile" && (
           <div className="flex flex-col gap-2 ">
-            
             <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
               <div className="flex flex-col gap-2">
                 <label>Bkash Number</label>
                 <CustomInput
                   type={"text"}
-                  ph={"Enter account name"}
+                  ph={"Enter bkash number"}
                   required={true}
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label>Nagad Number</label>
+                <label>Bkash Opening Balance</label>
                 <CustomInput
                   type={"text"}
-                  ph={"Enter account number"}
+                  ph={"Enter opening balance"}
                   required={true}
                 />
               </div>
@@ -146,7 +145,35 @@ export default function AddPayment({ actOn, useForEdit }) {
                 <label>Rocket Number</label>
                 <CustomInput
                   type={"text"}
-                  ph={"Enter bank name"}
+                  ph={"Enter rocket number"}
+                  required={true}
+                />
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <label>Rocket Opening Balance</label>
+                <CustomInput
+                  type={"text"}
+                  ph={"Enter opening balance"}
+                  required={true}
+                />
+              </div>
+            </div>
+            <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
+              <div className="flex flex-col gap-2">
+                <label>Nagad Number</label>
+                <CustomInput
+                  type={"text"}
+                  ph={"Enter nagad number"}
+                  required={true}
+                />
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <label>Nagad Opening Balance</label>
+                <CustomInput
+                  type={"text"}
+                  ph={"Enter opening balance"}
                   required={true}
                 />
               </div>
@@ -154,16 +181,18 @@ export default function AddPayment({ actOn, useForEdit }) {
           </div>
         )}
 
-        <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5 my-2 border border-slate-400 rounded-md py-0.5 px-1.0 pb-3  ">
-          <div className="flex flex-col gap-2">
-            <label>Opening balance</label>
-            <CustomInput
-              type={"text"}
-              ph={"Enter opening balance"}
-              required={true}
-            />
+        {selectedPaymentWay == "Cash" && (
+          <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5 my-2 border border-slate-400 rounded-md py-0.5 px-1.0 pb-3  ">
+            <div className="flex flex-col gap-2">
+              <label>Opening balance</label>
+              <CustomInput
+                type={"text"}
+                ph={"Enter opening balance"}
+                required={true}
+              />
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="flex justify-between mt-0.5">
           <CustomButton

@@ -2,6 +2,13 @@ const tHeadPermission = ["Permission", "Create", "Edit", "View", "Delete"];
 
 const tHeadRoles = ["Roles", "Permissions", "Actions"];
 
+export const tHeadProductInSale=[
+  "Product",
+  "Quantity",
+  "Unit Price",
+  "Sub Total",
+]
+
 const tHeadUser = [
   "Username",
   "Name",

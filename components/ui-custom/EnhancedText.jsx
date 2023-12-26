@@ -3,7 +3,7 @@ import React from "react";
 export default function EnhancedText({ children, kind, color }) {
   // no bg or text-color here, just size
   const style = {
-    one: "text-3xl font-semibold leading-5",
+    one: "text-3xl font-semibold leading-4",
     two: "text-xl font-semibold",
     three: "text-lg font-semibold",
     four: "text-base font-semibold",

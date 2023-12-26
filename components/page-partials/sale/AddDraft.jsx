@@ -7,25 +7,35 @@ import productGroups from "../../../static-data/product-groups";
 import React from "react";
 import { Check } from "lucide-react";
 
-export default function AddWarehouse({ actOn, useForEdit }) {
+export default function AddDraft({ actOn, useForEdit }) {
   return (
     <div className="  m-1.25 bg-wh border border-slate-400 rounded-md px-1.0">
       <EnhancedText
         kind={"two"}
         color="text-slate-800 py-0.5 border-b border-slate-300"
       >
-        Add Shelf
+        Add Brand
       </EnhancedText>
 
       <form className="flex flex-col gap-4 text-sm my-4">
-        <div className="sm:w-1/2 w-full flex flex-col gap-2">
-          <label>Warehouse</label>
-          <CustomSelect label={"Select Warehouse"} option={[]} />
-        </div>
+        <div className="grid content-end sm:grid-cols-2 grid-cols-1 gap-1.5">
+          <div className="flex flex-col gap-2">
+            <label>Brand Name</label>
+            <CustomInput
+              type={"text"}
+              ph={"Enter brand name"}
+              required={true}
+            />
+          </div>
 
-        <div className="sm:w-1/2 w-full flex flex-col gap-2">
-          <label>Shelf Name</label>
-          <CustomInput type={"text"} ph={"Enter shelf name"} required={true} />
+          <div className="flex flex-col gap-2">
+            <label>Product Group</label>
+            <CustomSelect
+              label="Select Product group"
+              ph=""
+              options={productGroups}
+            />
+          </div>
         </div>
 
         <div className="flex flex-col gap-2">

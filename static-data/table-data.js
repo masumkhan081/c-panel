@@ -9,6 +9,10 @@ const tDataPermissions = [
   "product_category",
 ];
 
+const tDataProductInSale=[
+
+]
+
 const tDataRoles = [
   {
     id: 1,
@@ -81,4 +85,4 @@ const tDataUsers = [
   },
 ];
 
-export { tDataPermissions, tDataRoles, tDataUsers };
+export { tDataPermissions, tDataRoles, tDataUsers,tDataProductInSale };

@@ -1,4 +1,4 @@
-import AddExpense from "@/components/page-partials/expense/add-expense/AddExpense";
+import AddExpense from "@/components/page-partials/expense/AddExpense";
 import React from "react";
 
 export default function page() {

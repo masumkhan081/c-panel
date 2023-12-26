@@ -124,38 +124,7 @@ const sidenav = [
       },
     ],
   },
-  {
-    id: 17,
-    label: "Warehouses",
-    icon: <Warehouse className="w-5 h-5" />,
-    sub: true,
-    childs: [
-      {
-        id: 1701,
-        label: "Add Warehouse",
-        icon: <PackagePlus className="w-5 h-5" />,
-        to: "/warehouses/add-warehouse",
-      },
-      {
-        id: 1702,
-        label: "Add Shelf",
-        icon: <ListPlus className="w-5 h-5" />,
-        to: "/warehouses/add-shelf",
-      },
-      {
-        id: 1703,
-        label: "manage Warehouses",
-        icon: <Table className="w-5 h-5" />,
-        to: "/warehouses",
-      },
-      {
-        id: 1704,
-        label: "manage Shefls",
-        icon: <LayoutPanelLeft className="w-5 h-5" />,
-        to: "/warehouses/shelves",
-      },
-    ],
-  },
+  
   {
     id: 6,
     label: "Service",
@@ -393,7 +362,7 @@ const sidenav = [
     childs: [
       {
         id: 1901,
-        label: "Add payment account",
+        label: "Add account",
         icon: <MessageCircle className="w-5 h-5" />,
         to: "/payment-accounts/add-account",
       },
