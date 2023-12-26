@@ -15,11 +15,13 @@ export default function RootLayout({ content }) {
     <div className="flex min-h-screen max-h-screen h-screen w-full ">
       {path.endsWith("login") === false && (
         <>
-          <div className={`${sideNavHidden ? " hidden" : "sm:block hidden"} h-screen max-h-screen `}>
+          <div
+            className={`${
+              sideNavHidden ? " hidden" : "sm:block hidden"
+            } h-screen max-h-screen `}
+          >
             <SideNav />
           </div>
-
-          <diV></diV>
 
           <div className="flex flex-grow flex-col justify-between h-screen max-h-screen  ">
             <TopNav />

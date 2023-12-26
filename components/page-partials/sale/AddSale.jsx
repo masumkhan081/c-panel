@@ -19,7 +19,7 @@ import CustomSearchSelect from "@/components/ui-custom/SearchWithSelect";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import SearchThenSelect from "@/components/ui-custom/SearchThenSelect";
-import TblProductInSale from "@/components/tabular-view/tblProductInSale";
+import TblProductInSale from "@/components/tabular-view/TblProductInSale";
 
 export default function AddSale() {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -29,6 +29,8 @@ export default function AddSale() {
   const [isMoreInfo, setMoreInfo] = useState(false);
 
   const [selectedPaymentWay, setPaymentWay] = useState();
+  const [selectedPaymentAccount, setPaymentAccount] = useState();
+  const [selectedCustomer, setCustomer] = useState("Walk-In Customer");
 
   return (
     <div className=" bg-slate-200  border border-slate-400 rounded-md px-1.0 pb-1.0 flex flex-col gap-0.5">
@@ -50,8 +52,10 @@ export default function AddSale() {
         <div className="grid content-end sm:grid-cols-2 grid-cols-1 gap-1.5 items-end">
           <div className="flex flex-col gap-2">
             <CustomSearchSelect
-              options={["search-result-1", "sh-2", "sh-3"]}
+              value={selectedCustomer}
+              options={["Walk-In Customer","search-result-1", "sh-2", "sh-3"]}
               label="Select Customer"
+              onChange={(opt) => setCustomer(opt)}
             />
           </div>
 
@@ -264,6 +268,29 @@ export default function AddSale() {
             />
           </div>
         </div>
+
+        {selectedPaymentWay == "Bank" && (
+          <div className="flex flex-col gap-2">
+            <CustomSelect
+              label="Select Payment Account"
+              options={["Account-1", "Account-2"]}
+              value={selectedPaymentAccount}
+              onChange={(value) => setPaymentAccount(value)}
+              //   bg={"light"}
+            />
+          </div>
+        )}
+        {selectedPaymentWay == "Mobile" && (
+          <div className="flex flex-col gap-2">
+            <CustomSelect
+              label="Select Mobile Account"
+              options={["Bkash-Account", "nagad-Account"]}
+              value={selectedPaymentAccount}
+              onChange={(value) => setPaymentAccount(value)}
+              //   bg={"light"}
+            />
+          </div>
+        )}
         <div className="grid content-end   grid-cols-1 gap-1.5 items-end">
           <div className="flex flex-col gap-2">
             <label>Payment Note</label>
@@ -275,149 +302,7 @@ export default function AddSale() {
           </div>
         </div>
 
-        {selectedPaymentWay == "Bank" && (
-          <div className="flex flex-col gap-2 ">
-            <EnhancedText
-              kind={"two"}
-              color="text-slate-800 py-0.5 border-b border-slate-300 mb-2"
-            >
-              Bank Information
-            </EnhancedText>
-            <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
-              <div className="flex flex-col gap-2">
-                <label>Account Name</label>
-                <CustomInput
-                  type={"text"}
-                  ph={"Enter account name"}
-                  required={true}
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label>Account Number</label>
-                <CustomInput
-                  type={"text"}
-                  ph={"Enter account number"}
-                  required={true}
-                />
-              </div>
-            </div>
-
-            <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
-              <div className="flex flex-col gap-2">
-                <label>Bank Name</label>
-                <CustomInput
-                  type={"text"}
-                  ph={"Enter bank name"}
-                  required={true}
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label>Branch Name</label>
-                <CustomInput
-                  type={"text"}
-                  ph={"Enter branch name"}
-                  required={true}
-                />
-              </div>
-            </div>
-
-            <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
-              <div className="flex flex-col gap-2">
-                <label>SWIFT code</label>
-                <CustomInput
-                  type={"text"}
-                  ph={"Enter swift code"}
-                  required={true}
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label>Routing Number</label>
-                <CustomInput
-                  type={"text"}
-                  ph={"Enter routing number"}
-                  required={true}
-                />
-              </div>
-            </div>
-            <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
-              <div className="flex flex-col gap-2">
-                <label>Mobile Number</label>
-                <CustomInput
-                  type={"text"}
-                  ph={"Enter mobile number"}
-                  required={true}
-                />
-              </div>
-            </div>
-          </div>
-        )}
-        {selectedPaymentWay == "Mobile" && (
-          <div className="flex flex-col gap-2 ">
-            <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
-              <div className="flex flex-col gap-2">
-                <label>Bkash Number</label>
-                <CustomInput
-                  type={"text"}
-                  ph={"Enter bkash number"}
-                  required={true}
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label>Bkash Opening Balance</label>
-                <CustomInput
-                  type={"text"}
-                  ph={"Enter opening balance"}
-                  required={true}
-                />
-              </div>
-            </div>
-
-            <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
-              <div className="flex flex-col gap-2">
-                <label>Rocket Number</label>
-                <CustomInput
-                  type={"text"}
-                  ph={"Enter rocket number"}
-                  required={true}
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label>Rocket Opening Balance</label>
-                <CustomInput
-                  type={"text"}
-                  ph={"Enter opening balance"}
-                  required={true}
-                />
-              </div>
-            </div>
-            <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5">
-              <div className="flex flex-col gap-2">
-                <label>Nagad Number</label>
-                <CustomInput
-                  type={"text"}
-                  ph={"Enter nagad number"}
-                  required={true}
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label>Nagad Opening Balance</label>
-                <CustomInput
-                  type={"text"}
-                  ph={"Enter opening balance"}
-                  required={true}
-                />
-              </div>
-            </div>
-          </div>
-        )}
-
-        {selectedPaymentWay == "Cash" && (
+        {/* {selectedPaymentWay == "Cash" && (
           <div className="grid sm:grid-cols-2 grid-cols-1 gap-1.5 my-2 border border-slate-400 rounded-md py-0.5 px-1.0 pb-3  ">
             <div className="flex flex-col gap-2">
               <label>Opening balance</label>
@@ -428,7 +313,7 @@ export default function AddSale() {
               />
             </div>
           </div>
-        )}
+        )} */}
       </div>
 
       <div className="bg-wh flex justify-between gap-1.0 mt-1.0 p-1.0">

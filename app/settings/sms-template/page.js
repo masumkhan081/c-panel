@@ -1,4 +1,3 @@
-import AddBrand from "@/components/page-partials/brand/AddBrand";
 import SMSTemplate from "@/components/page-partials/setting/SMSTemplate";
 import React from "react";
 

@@ -239,7 +239,7 @@ const sidenav = [
         to: "/products/create",
       },
       {
-        id: 1200,
+        id: 1201,
         label: "Manage Products",
         icon: <FileCog className="w-5 h-5" />,
         to: "/products",

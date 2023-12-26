@@ -1,4 +1,3 @@
-import AddBrand from '@/components/page-partials/brand/AddBrand'
 import EmailTemplate from '@/components/page-partials/setting/EmailTemplate'
 import React from 'react'
 
