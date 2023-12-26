@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import { tHeadProductInSale } from "@/static-data/table-headers";
 import { tDataProductInSale } from "@/static-data/table-data";
