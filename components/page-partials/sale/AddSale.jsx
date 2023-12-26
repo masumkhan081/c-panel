@@ -104,9 +104,8 @@ export default function AddSale() {
             <SearchThenSelect />
           </div>
         </div>
-        <div className="grid content-end  grid-cols-1 gap-1.5 items-end">
-          {/* <TblProductInSale /> */}
-        </div>
+
+        <TblProductInSale />
       </div>
       <div className="bg-wh px-0.5 pb-0.5 flex flex-col gap-4 text-sm my-4 rounded-md">
         <EnhancedText

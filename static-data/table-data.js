@@ -10,6 +10,18 @@ const tDataPermissions = [
 ];
 
 const tDataProductInSale=[
+  {
+    product:"Acer Aspire E 15 (Color:White) AS0017-2 Acer",
+    "quantity":12,
+    unit_price:1000,
+    sub_total:12000,
+  },
+  {
+    product:"Acer Aspire E 15 (Color:Black) AS0017-2 Acer",
+    "quantity":2,
+    unit_price:1000,
+    sub_total:2000,
+  }
 
 ]
 
