@@ -9,27 +9,50 @@ const tDataPermissions = [
   "product_category",
 ];
 
-const tDataProductInSale=[
+const tDataProductInSale = [
   {
-    product:"Acer Aspire E 15 (Color:White) AS0017-2 Acer",
-    "quantity":12,
-    unit_price:1000,
-    sub_total:12000,
+    product: "Acer Aspire E 15 (Color:White) AS0017-2 Acer",
+    quantity: 12,
+    unit_price: 1000,
+    sub_total: 12000,
   },
   {
-    product:"Acer Aspire E 15 (Color:Black) AS0017-2 Acer",
-    "quantity":2,
-    unit_price:1000,
-    sub_total:2000,
+    product: "Acer Aspire E 15 (Color:Black) AS0017-2 Acer",
+    quantity: 2,
+    unit_price: 1000,
+    sub_total: 2000,
   },
   {
-    product:"Apple Watch (T-30@q) BD",
-    "quantity":4,
-    unit_price:2000,
-    sub_total:8000,
-  }
-
-]
+    product: "Apple Watch (T-30@q) BD",
+    quantity: 4,
+    unit_price: 2000,
+    sub_total: 8000,
+  },
+  {
+    product: "Apple Watch (T-30@q) BD",
+    quantity: 4,
+    unit_price: 2000,
+    sub_total: 8000,
+  },
+  {
+    product: "Apple Watch (T-30@q) BD",
+    quantity: 4,
+    unit_price: 2000,
+    sub_total: 8000,
+  },
+  {
+    product: "Apple Watch (T-30@q) BD",
+    quantity: 4,
+    unit_price: 2000,
+    sub_total: 8000,
+  },
+  {
+    product: "Apple Watch (T-30@q) BD",
+    quantity: 4,
+    unit_price: 2000,
+    sub_total: 8000,
+  },
+];
 
 const tDataRoles = [
   {
@@ -103,4 +126,4 @@ const tDataUsers = [
   },
 ];
 
-export { tDataPermissions, tDataRoles, tDataUsers,tDataProductInSale };
+export { tDataPermissions, tDataRoles, tDataUsers, tDataProductInSale };

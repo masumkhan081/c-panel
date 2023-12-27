@@ -1,10 +1,11 @@
 import React from "react";
 
-export default function Badge({ txt, bg, font,children }) {
+export default function Badge({ txt, bg, font, children }) {
   const bg_styles = {
     wh: "bg-wh text-slate-900",
     teal: "bg-teal-700 text-slate-100",
-    "gray": "bg-slate-100 text-black",
+    yellow:"bg-yellow-700",
+    gray: "bg-slate-100 text-black",
     "gray-2": "bg-slate-200 text-black",
     "gray-3": "bg-slate-300 text-black",
   };

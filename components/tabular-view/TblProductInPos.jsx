@@ -11,37 +11,45 @@ export default function TblProductInPos() {
   const [selectedCountUnit, setCountUnit] = useState("Pieces");
 
   return (
-    <div className="  my-1.25 bg-wh border border-slate-300 rounded-md px-1.0">
-      <div className="overflow-x-auto">
-        <table className="w-full  ">
-          <thead>
-            <tr className="flex justify-between py-0.25  ">
-              <th className=" capitalize bg-slale-50 text-blue-900    w-[280px] ">
+    <div className="flex-grow my-0.25 bg-wh rounded-md h-[300px] max-h-[340px]">
+      <div className="overflow-x-auto  h-full">
+        <table className="w-full h-full ">
+          <thead
+          className="bg-wh"
+            style={{
+              position: "-webkit-sticky",
+              position: "sticky",
+              top: "0",
+              zIndex: "1",
+            }}
+          >
+            <tr className="flex justify-between py-0.25 ">
+              <th className=" capitalize bg-slale-50 text-blue-900 text-sm w-[265px] ">
                 Product
               </th>
-              <th className=" capitalize bg-slale-50 text-blue-900  w-32 ">
+              <th className=" capitalize bg-slale-50 text-blue-900 text-sm w-32 ">
                 Quantity
               </th>
-              <th className=" capitalize bg-slale-50 text-blue-900  w-5.0 ">
+              <th className=" capitalize bg-slale-50 text-blue-900 text-sm w-5.0 ">
                 Unit Price
               </th>
-              <th className=" capitalize bg-slale-50 text-blue-900   w-5.0  ">
+              <th className=" capitalize bg-slale-50 text-blue-900 text-sm  w-5.0  ">
                 Sub Total
               </th>
-              <th className=" capitalize bg-slale-50 text-blue-900  w-5.0  ">
+              <th className=" capitalize bg-slale-50 text-blue-900 text-sm w-5.0  ">
                 Action
               </th>
             </tr>
           </thead>
 
-          <tbody className="w-full bg-slate-100 mb-2 px-1 py-1">
+          <tbody className="w-full bg-slate-100 mb-2 px-1 py-1 overflow-y-scroll">
             {tDataProductInSale.map((item, ind) => {
               return (
                 <tr
                   key={ind}
                   className="p-1 flex justify-between text-center text-0.9/1.25 font-normal mb-2 rounded-md capitalize border border-slate-400 bg-slate-200"
                 >
-                  <td className="flex flex-col capitalize gap-2 py-0.25 w-[280px]">
+                  <td className="flex flex-col capitalize gap-2 py-0.25 w-[265px]">
                     <span>{item.product}</span>
                     {/* <textarea
                       rows={2}
@@ -60,6 +68,7 @@ export default function TblProductInPos() {
                         type="text"
                         className="h-[30px] outline-none   rounded-sm w-20 py-0.25 text-center font-semibold text-base"
                         value={item.quantity}
+                        readOnly={true}
                       ></input>
                       <CustomButton
                         startIcon={<Plus className="w-5 h-5" />}
@@ -80,6 +89,7 @@ export default function TblProductInPos() {
                       type="text"
                       className="border border-slate-300 rounded-sm w-5.0 py-0.25 text-center font-semibold text-base"
                       value={item.unit_price}
+                      readOnly={true}
                     ></input>
                   </td>
                   <td className="w-5.0 flex justify-center items-start font-semibold py-0.25">
