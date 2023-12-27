@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { tHeadProductInSale } from "@/static-data/table-headers";
 import { tDataProductInSale } from "@/static-data/table-data";
@@ -19,7 +19,7 @@ export default function TblProductInPos() {
               <th className=" capitalize bg-slale-50 text-blue-900    w-[280px] ">
                 Product
               </th>
-              <th className=" capitalize bg-slale-50 text-blue-900  w-36 ">
+              <th className=" capitalize bg-slale-50 text-blue-900  w-32 ">
                 Quantity
               </th>
               <th className=" capitalize bg-slale-50 text-blue-900  w-5.0 ">
@@ -34,12 +34,12 @@ export default function TblProductInPos() {
             </tr>
           </thead>
 
-          <tbody className="w-full bg-slate-200 mb-2 px-1 py-1">
+          <tbody className="w-full bg-slate-100 mb-2 px-1 py-1">
             {tDataProductInSale.map((item, ind) => {
               return (
                 <tr
                   key={ind}
-                  className="p-1 flex justify-between text-center text-0.9/1.25 font-normal mb-1 capitalize border"
+                  className="p-1 flex justify-between text-center text-0.9/1.25 font-normal mb-2 rounded-md capitalize border border-slate-400 bg-slate-200"
                 >
                   <td className="flex flex-col capitalize gap-2 py-0.25 w-[280px]">
                     <span>{item.product}</span>
@@ -50,32 +50,28 @@ export default function TblProductInPos() {
                     /> */}
                   </td>
 
-                  <td className="flex flex-col gap-2 w-fit ">
-                    <div className="flex ">
+                  <td className="flex flex-col gap-2 w-fit mr-1   ">
+                    <div className="flex   h-[30px]">
                       <CustomButton
-                        startIcon={<Minus className="w-5 h-5"/>}
-                        style={"border bg-slate-400 px-0.25 rounded-sm"}
+                        startIcon={<Minus className="w-5 h-5" />}
+                        style={"bg-slate-100 px-0.25 rounded-sm h-[30px]"}
                       />
                       <input
                         type="text"
-                        className="border border-slate-300 rounded-sm w-24 py-0.25 text-center font-semibold text-base"
+                        className="h-[30px] outline-none   rounded-sm w-20 py-0.25 text-center font-semibold text-base"
                         value={item.quantity}
                       ></input>
                       <CustomButton
-                        startIcon={<Plus className="w-5 h-5"/>}
-                        style={"border bg-slate-400 px-0.25 rounded-sm"}
+                        startIcon={<Plus className="w-5 h-5" />}
+                        style={" bg-slate-100 px-0.25 rounded-sm h-[30px]"}
                       />
                     </div>
-                    {/* <CustomInput
-                      starButtonIcon={<Minus />}
-                      endButtonIcon={<Plus />}
-                      type="text"
-                      value={item.quantity}
-                    /> */}
+
                     <CustomSelect
                       options={["Pieces"]}
                       value={selectedCountUnit}
                       onChange={(opt) => setCountUnit(opt)}
+                      bg={"light"}
                     />
                   </td>
 
@@ -87,10 +83,13 @@ export default function TblProductInPos() {
                     ></input>
                   </td>
                   <td className="w-5.0 flex justify-center items-start font-semibold py-0.25">
-                    {item.sub_total} 
+                    {item.sub_total}
                   </td>
-                  <td className="w-5.0 flex justify-center items-start" >
-                    <CustomButton startIcon={<X className="text-red-700 w-7 h-7"/>} style={"my-0.125"} />
+                  <td className="w-5.0 flex justify-center items-center">
+                    <CustomButton
+                      startIcon={<X className="text-red-700 w-5 h-6" />}
+                      style={"my-0.125   bg-slate-100 px-0.125 rounded-sm"}
+                    />
                   </td>
                 </tr>
               );

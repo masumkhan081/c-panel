@@ -20,6 +20,8 @@ export default function CreatePos({ actOn, useForEdit }) {
   const [selectedBrand, setSelectedBrand] = useState("All Brands");
   const [selectedCustomer, setCustomer] = useState("Walk-In Customer");
 
+  const [selectedDiscountType, setDiscountType] = useState("Fixed");
+
   function today() {
     let date = new Date();
     return (
@@ -28,7 +30,7 @@ export default function CreatePos({ actOn, useForEdit }) {
   }
 
   return (
-    <div className=" bg-slate-200 rounded-md px-1.0 pb-1.0 flex flex-col gap-0.5 fixed bottom-[38px]">
+    <div className=" bg-slate-200 rounded-md px-1.0   h-full flex flex-col justify-end gap-0.5 fixed ">
       {/*  top tool bar */}
       <div className="flex justify-between p-0.25 ">
         {/* date and shhop name */}
@@ -45,28 +47,28 @@ export default function CreatePos({ actOn, useForEdit }) {
         <div className="flex gap-1">
           <Badge txt={"Quick Move:"} />
           <CustomButton
-            startIcon={<Layers2 className="text-green-600" />}
+            startIcon={<Layers2 className="text-green-600 w-5 h-5" />}
             style={"p-0.125 border rounded-md bg-wh"}
           />
           <CustomButton
-            startIcon={<Layers2 className="text-amber-700" />}
+            startIcon={<Layers2 className="text-amber-700 w-5 h-5" />}
             style={"p-0.125 border rounded-md bg-wh"}
           />
           <CustomButton
-            startIcon={<Layers2 className="text-yellow-600" />}
+            startIcon={<Layers2 className="text-yellow-600 w-5 h-5" />}
             style={"p-0.125 border rounded-md bg-wh"}
           />
           <CustomButton
-            startIcon={<Layers2 className="text-cyan-700" />}
+            startIcon={<Layers2 className="text-cyan-700 w-5 h-5" />}
             style={"p-0.125 border rounded-md bg-wh"}
           />
           <CustomButton
-            startIcon={<Layers2 className="text-emerald-700" />}
+            startIcon={<Layers2 className="text-emerald-700 w-5 h-5" />}
             style={"p-0.125 border rounded-md bg-wh"}
           />
           <CustomButton
-            startIcon={<Layers2 className="text-wh" />}
-            style={"p-0.125 border rounded-md bg-slate-500"}
+            startIcon={<Layers2 className="text-wh w-5 h-5" />}
+            style={"p-0.125 border rounded-md bg-slate-400"}
           />
         </div>
       </div>
@@ -102,9 +104,26 @@ export default function CreatePos({ actOn, useForEdit }) {
             <TblProductInPos />
           </div>
           {/*  table footer */}
-          <div>
-
-
+          <div className="grid grid-cols-2 gap-4">
+            <div className="h-[33px]">
+              <CustomSelect
+                label={"Discount type"}
+                options={["Percentage", "Fixed"]}
+                value={selectedDiscountType}
+                onChange={(opt) => setDiscountType(opt)}
+              />
+            </div>
+            <div className="h-[33px]">
+              <CustomInput ph={"discount amount"} afterChange={() => {}} />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <Badge txt={"Item"} bg="gray-2" font={3.2}>
+              <Badge txt="5000" bg="gray" font={3.1} />
+            </Badge>
+            <Badge txt={"Total"} bg="gray-2" font={3.2}>
+              <Badge txt="5000" bg="gray" font={3.1} />
+            </Badge>
           </div>
         </div>
 
@@ -149,12 +168,11 @@ export default function CreatePos({ actOn, useForEdit }) {
         </div>
       </div>
       {/* container of sticky footer section */}
-      {/* <div className=" py-0.25 px-1.0 border border-red-900 flex mx-auto justify-center gap-0.75 fixed bottom-[40px]">
+      <div className="w-full fixed bottom-0 h-[45px] py-0.25 px-1.0 border border-slate-400 bg-slate-200 rounded-md flex mx-auto justify-center gap-0.75  ">
         <CustomButton startIcon={<X />} />
         <CustomButton startIcon={<X />} />
         <CustomButton startIcon={<X />} />
-         
-      </div> */}
+      </div>
     </div>
   );
 }
