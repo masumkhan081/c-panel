@@ -74,7 +74,7 @@ export default function CreatePos({ actOn, useForEdit }) {
       {/* container below top toolbar */}
       <div className="flex-grow grid grid-cols-5 gap-0.75 mx-2 ">
         {/* pos -> tabule */}
-        <div className="col-span-3 bg-wh flex flex-col gap-0.25 p-0.5 rounded-md">
+        <div className="col-span-3 bg-wh flex flex-col gap-0.25 py-0.5 px-0.25 rounded-md">
           <div className="grid content-center sm:grid-cols-5 grid-cols-1 gap-1.5 items-center">
             <div className="col-span-2 h-[40px]">
               <SearchWithSelect
@@ -103,7 +103,7 @@ export default function CreatePos({ actOn, useForEdit }) {
           </div>
           <div className="flex-grow flex flex-col gap-2  ">
             <TblProductInPos />
-            <div className="grid grid-cols-2 gap-4 h-[35px]">
+            <div className="grid grid-cols-2 gap-4 h-[35px] px-0.5">
               <div className="h-[35px]">
                 <CustomSelect
                   label={"Discount type"}
@@ -125,11 +125,11 @@ export default function CreatePos({ actOn, useForEdit }) {
               </div>
             </div>
             {/*  table footer */}
-            <div className="grid grid-cols-2 gap-4">
-              <Badge txt={"Item"} bg="gray-2" font={2.2}>
+            <div className="grid grid-cols-2 gap-4 px-0.5">
+              <Badge txt={"Item"} bg="wh" font={2.2}>
                 <Badge txt="5" bg="gray" font={2.1} />
               </Badge>
-              <Badge txt={"Total"} bg="gray-2" font={2.2}>
+              <Badge txt={"Total"} bg="wh" font={2.2}>
                 <Badge txt="5000" bg="gray" font={2.1} />
               </Badge>
             </div>

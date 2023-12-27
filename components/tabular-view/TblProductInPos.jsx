@@ -15,7 +15,7 @@ export default function TblProductInPos() {
       <div className="overflow-x-auto  h-full">
         <table className="w-full h-full ">
           <thead
-          className="bg-wh"
+            className="bg-wh"
             style={{
               position: "-webkit-sticky",
               position: "sticky",
@@ -42,12 +42,12 @@ export default function TblProductInPos() {
             </tr>
           </thead>
 
-          <tbody className="w-full bg-slate-100 mb-2 px-1 py-1 overflow-y-scroll">
+          <tbody className="w-full bg-slate-100 mb-2 ">
             {tDataProductInSale.map((item, ind) => {
               return (
                 <tr
                   key={ind}
-                  className="p-1 flex justify-between text-center text-0.9/1.25 font-normal mb-2 rounded-md capitalize border border-slate-400 bg-slate-200"
+                  className="p-1 flex justify-between text-center text-0.9/1.25 font-normal mr-2 mb-2 rounded-md capitalize border border-slate-400 bg-slate-200"
                 >
                   <td className="flex flex-col capitalize gap-2 py-0.25 w-[265px]">
                     <span>{item.product}</span>
@@ -59,35 +59,37 @@ export default function TblProductInPos() {
                   </td>
 
                   <td className="flex flex-col gap-2 w-fit mr-1   ">
-                    <div className="flex   h-[30px]">
+                    <div className="flex  h-[30px]">
                       <CustomButton
                         startIcon={<Minus className="w-5 h-5" />}
-                        style={"bg-slate-100 px-0.25 rounded-sm h-[30px]"}
+                        style={"bg-slate-100 px-0.25 rounded-sm h-[28px]"}
                       />
                       <input
                         type="text"
-                        className="h-[30px] outline-none   rounded-sm w-20 py-0.25 text-center font-semibold text-base"
+                        className="h-[28px] outline-none   rounded-sm w-20 py-0.25 text-center font-semibold text-base"
                         value={item.quantity}
                         readOnly={true}
                       ></input>
                       <CustomButton
                         startIcon={<Plus className="w-5 h-5" />}
-                        style={" bg-slate-100 px-0.25 rounded-sm h-[30px]"}
+                        style={" bg-slate-100 px-0.25 rounded-sm h-[28px]"}
                       />
                     </div>
 
-                    <CustomSelect
-                      options={["Pieces"]}
-                      value={selectedCountUnit}
-                      onChange={(opt) => setCountUnit(opt)}
-                      bg={"light"}
-                    />
+                    <div className="h-[26px]">
+                      <CustomSelect
+                        options={["Pieces"]}
+                        value={selectedCountUnit}
+                        onChange={(opt) => setCountUnit(opt)}
+                        bg={"light"}
+                      />
+                    </div>
                   </td>
 
                   <td className="w-fit">
                     <input
                       type="text"
-                      className="border border-slate-300 rounded-sm w-5.0 py-0.25 text-center font-semibold text-base"
+                      className="border border-slate-300 h-[28px] rounded-md w-5.0 py-0.25 text-center font-semibold text-base"
                       value={item.unit_price}
                       readOnly={true}
                     ></input>
