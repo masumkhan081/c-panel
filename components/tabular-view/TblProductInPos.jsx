@@ -11,8 +11,8 @@ export default function TblProductInPos() {
   const [selectedCountUnit, setCountUnit] = useState("Pieces");
 
   return (
-    <div className="flex-grow my-0.25 bg-wh rounded-md h-[300px] max-h-[340px]">
-      <div className="overflow-x-auto  h-full">
+    <div className=" my-0.25 bg-wh rounded-md  max-h-[350px]">
+      <div className="overflow-x-auto h-full  ">
         <table className="w-full h-full ">
           <thead
             className="bg-wh"

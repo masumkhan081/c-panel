@@ -72,9 +72,9 @@ export default function CreatePos({ actOn, useForEdit }) {
       </div>
 
       {/* container below top toolbar */}
-      <div className="flex-grow grid grid-cols-5 gap-0.75 mx-2 ">
+      <div className="flex-grow grid  grid-cols-5 gap-0.75 mx-2 ">
         {/* pos -> tabule */}
-        <div className="col-span-3 bg-wh flex flex-col gap-0.25 py-0.5 px-0.25 rounded-md">
+        <div className="col-span-3  bg-wh flex flex-col  gap-0.25 py-0.5 px-0.25 rounded-md">
           <div className="grid content-center sm:grid-cols-5 grid-cols-1 gap-1.5 items-center">
             <div className="col-span-2 h-[40px]">
               <SearchWithSelect
@@ -95,15 +95,15 @@ export default function CreatePos({ actOn, useForEdit }) {
                   readOnly={true}
                 ></input>
                 <CustomButton
-                  startIcon={<Plus className="w-5 h-5 " />}
+                  startIcon={<Plus className="w-5 overflow-y-scrollimageh-5 " />}
                   style="bg-slate-300 px-0.25"
                 />
               </div>
             </div>
           </div>
-          <div className="flex-grow flex flex-col gap-2  ">
+          <div className="flex-grow flex flex-col justify-start gap-2  ">
             <TblProductInPos />
-            <div className="grid grid-cols-2 gap-4 h-[35px] px-0.5">
+            <div className="grid grid-cols-2 gap-4 h-[35px] px-0.5 ">
               <div className="h-[35px]">
                 <CustomSelect
                   label={"Discount type"}
@@ -125,7 +125,7 @@ export default function CreatePos({ actOn, useForEdit }) {
               </div>
             </div>
             {/*  table footer */}
-            <div className="grid grid-cols-2 gap-4 px-0.5">
+            <div className="grid grid-cols-2 gap-4 px-0.5 ">
               <Badge txt={"Item"} bg="wh" font={2.2}>
                 <Badge txt="5" bg="gray" font={2.1} />
               </Badge>
@@ -139,7 +139,7 @@ export default function CreatePos({ actOn, useForEdit }) {
         {/* product list with scrolling */}
         <div className="col-span-2 bg-slate-200 flex flex-col gap-2 px-0.5 py-0.25 rounded-md">
           {/* category and brand selection */}
-          <div className="flex gap-3 ">
+          <div className="flex justify-center gap-3 ">
             <SearchWithSelect
               value={selectedCategory}
               bg={"light"}
@@ -162,12 +162,12 @@ export default function CreatePos({ actOn, useForEdit }) {
           </div>
 
           {/* product images scrollable */}
-          <div className=" flex gap-2 flex-wrap overflow-y-scroll max-h-[450px] ">
+          <div className="flex-grow flex gap-2 justify-center flex-wrap overflow-y-scroll max-h-[350px] ">
             {prdcts.map((item, ind) => {
               return (
                 <button
                   key={ind}
-                  className="max-w-[120px] p-0.5 rounded-md flex flex-wrap  flex-col items-center justify-center gap-1 bg-wh"
+                  className="max-w-[120px] max-h-[180px] p-0.5 rounded-md flex flex-wrap  flex-col items-center justify-center gap-1 bg-wh"
                 >
                   <Image className="w-12 h-12" />
                   <span>{"Apache Something (AS001@ 12)"}</span>
@@ -185,7 +185,7 @@ export default function CreatePos({ actOn, useForEdit }) {
           bottom: "0",
           zIndex: "1",
         }}
-        className="flex justify-between p-0.25  bg-gradient-to-t from-slate-600 "
+        className="flex justify-between py-0.25 px-1.0  bg-gradient-to-t from-slate-600 "
       >
         <div className="flex gap-1">
           <CustomButton
