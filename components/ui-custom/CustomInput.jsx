@@ -21,7 +21,7 @@ export default function CustomInput({
   return (
     <div className="flex rounded-md border border-slate-300 w-full">
       {startIcon && (
-        <span className="bg-slate-200 py-0.25 px-0.5 border-r rounded-r-sm border-slate-300">
+        <span className="bg-slate-200 py-0.25 px-0.25 border-r rounded-r-sm border-slate-300">
           {startIcon}
         </span>
       )}

@@ -16,8 +16,8 @@
   }
 }
 ::-webkit-scrollbar {
-  width: 0.5rem;
-  height: 1rem;
+  width: 0.35rem;
+  height: 0.35rem;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-track-piece {
@@ -25,13 +25,12 @@
 }
 ::-webkit-scrollbar-button {
   background: #c9370a;
-  height: 15px;
-
+  height: 10px;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
   background: #0f0f0f;
-  height: 40px;
+  height: 20px;
   border-radius: 10px;
 }
 

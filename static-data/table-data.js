@@ -21,6 +21,12 @@ const tDataProductInSale=[
     "quantity":2,
     unit_price:1000,
     sub_total:2000,
+  },
+  {
+    product:"Apple Watch (T-30@q) BD",
+    "quantity":4,
+    unit_price:2000,
+    sub_total:8000,
   }
 
 ]

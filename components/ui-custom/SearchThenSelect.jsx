@@ -41,14 +41,14 @@ const SearchThenSelect = ({
   return (
     <div className="relative w-full" ref={dropdownRef}>
       <div
-        className={`py-1 px-1.0 w-full rounded-md capitalize cursor-pointer flex justify-between items-center ${styles[bg]}`}
+        className={` px-1.0 w-full h-full rounded-md capitalize cursor-pointer flex justify-between items-center ${styles[bg]}`}
         onClick={toggleDropdown}
       >
         <CustomInput
           type="text"
-          startIcon={<Search />}
+          startIcon={<Search className="w-4 h-4"/>}
           // endButtonTxt={"Search"}
-          endButtonIcon={<Plus />}
+          endButtonIcon={<Plus className="w-4 h-4"/>}
         />
       </div>
 

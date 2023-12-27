@@ -7,7 +7,7 @@ import { Minus, Plus, X } from "lucide-react";
 import CustomSelect from "../ui-custom/CustomSelect";
 import CustomButton from "../ui-custom/CustomButton";
 
-export default function TblProductInSale() {
+export default function TblProductInPos() {
   const [selectedCountUnit, setCountUnit] = useState("Pieces");
 
   return (
@@ -15,55 +15,55 @@ export default function TblProductInSale() {
       <div className="overflow-x-auto">
         <table className="w-full  ">
           <thead>
-            <tr className="flex justify-between py-0.5 0 text-base">
-              <th className=" capitalize bg-slale-50 text-blue-900    w-[320px] ">
+            <tr className="flex justify-between py-0.25  ">
+              <th className=" capitalize bg-slale-50 text-blue-900    w-[280px] ">
                 Product
               </th>
-              <th className=" capitalize bg-slale-50 text-blue-900  w-48 ">
+              <th className=" capitalize bg-slale-50 text-blue-900  w-36 ">
                 Quantity
               </th>
-              <th className=" capitalize bg-slale-50 text-blue-900  w-8.0 ">
+              <th className=" capitalize bg-slale-50 text-blue-900  w-5.0 ">
                 Unit Price
               </th>
-              <th className=" capitalize bg-slale-50 text-blue-900   w-7.0  ">
+              <th className=" capitalize bg-slale-50 text-blue-900   w-5.0  ">
                 Sub Total
               </th>
-              <th className=" capitalize bg-slale-50 text-blue-900  w-7.0  ">
+              <th className=" capitalize bg-slale-50 text-blue-900  w-5.0  ">
                 Action
               </th>
             </tr>
           </thead>
 
-          <tbody className="w-full bg-slate-50 mb-2 px-1 py-1">
+          <tbody className="w-full bg-slate-200 mb-2 px-1 py-1">
             {tDataProductInSale.map((item, ind) => {
               return (
                 <tr
                   key={ind}
                   className="p-1 flex justify-between text-center text-0.9/1.25 font-normal mb-1 capitalize border"
                 >
-                  <td className="flex flex-col capitalize gap-2 py-0.25 w-[320px]">
+                  <td className="flex flex-col capitalize gap-2 py-0.25 w-[280px]">
                     <span>{item.product}</span>
-                    <textarea
+                    {/* <textarea
                       rows={2}
                       className="border border-slate-400 bg-wh px-1 "
                       placeholder="Add product IMEI, Serial number or other informations here."
-                    />
+                    /> */}
                   </td>
 
                   <td className="flex flex-col gap-2 w-fit ">
                     <div className="flex ">
                       <CustomButton
-                        startIcon={<Minus />}
-                        style={"border bg-slate-200 px-0.25 rounded-sm"}
+                        startIcon={<Minus className="w-5 h-5"/>}
+                        style={"border bg-slate-400 px-0.25 rounded-sm"}
                       />
                       <input
                         type="text"
-                        className="border border-slate-300 rounded-sm w-32 py-0.25 text-center font-semibold text-base"
+                        className="border border-slate-300 rounded-sm w-24 py-0.25 text-center font-semibold text-base"
                         value={item.quantity}
                       ></input>
                       <CustomButton
-                        startIcon={<Plus />}
-                        style={"border bg-slate-200 px-0.25 rounded-sm"}
+                        startIcon={<Plus className="w-5 h-5"/>}
+                        style={"border bg-slate-400 px-0.25 rounded-sm"}
                       />
                     </div>
                     {/* <CustomInput
@@ -82,14 +82,14 @@ export default function TblProductInSale() {
                   <td className="w-fit">
                     <input
                       type="text"
-                      className="border border-slate-300 rounded-sm w-8.0 py-0.25 text-center font-semibold text-base"
+                      className="border border-slate-300 rounded-sm w-5.0 py-0.25 text-center font-semibold text-base"
                       value={item.unit_price}
                     ></input>
                   </td>
-                  <td className="w-7.0 flex justify-center items-start font-semibold py-0.25">
+                  <td className="w-5.0 flex justify-center items-start font-semibold py-0.25">
                     {item.sub_total} 
                   </td>
-                  <td className="w-7.0 flex justify-center items-start" >
+                  <td className="w-5.0 flex justify-center items-start" >
                     <CustomButton startIcon={<X className="text-red-700 w-7 h-7"/>} style={"my-0.125"} />
                   </td>
                 </tr>

@@ -12,7 +12,7 @@ export const userSlice = createSlice({
   },
   reducers: {
     setLoggedInUser: (state, action) => {
-      alert(JSON.stringify(action.payload));
+      // alert(JSON.stringify(action.payload));
       state = {
         ...state,
         ...action.payload,

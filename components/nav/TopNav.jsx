@@ -44,7 +44,7 @@ export default function TopNav() {
       style={{ position: "-webkit-sticky", position: "sticky", top: 0 }}
       className="w-full flex flex-col  bg-wh border-b border-slate-400 rounded-b-md"
     >
-      <div className="flex justify-between items-center  px-1.0 py-0.62   border-b border-slate-300  ">
+      <div className="flex justify-between items-center  px-1.0 py-1   border-b border-slate-300  ">
         <CustomButton
           afterClick={() =>
             dispatch(
@@ -81,7 +81,7 @@ export default function TopNav() {
           </div>
         </p>
       </div>
-      <div className="flex justify-start py-0.38 px-1.0 font-inter ">
+      <div className="flex justify-start py-0.25 px-1.0 font-mono text-sm">
         <span className="">{"Home" + pathname}</span>
       </div>
     </div>

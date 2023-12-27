@@ -14,7 +14,7 @@ import {
   SendHorizonal,
   X,
 } from "lucide-react";
-import CustomSearchSelect from "@/components/ui-custom/SearchWithSelect";
+import SearchWithSelect from "@/components/ui-custom/SearchWithSelect";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import SearchThenSelect from "@/components/ui-custom/SearchThenSelect";
@@ -50,7 +50,7 @@ export default function AddSale() {
         {/*  */}
         <div className="grid content-end sm:grid-cols-2 grid-cols-1 gap-1.5 items-end">
           <div className="flex flex-col gap-2">
-            <CustomSearchSelect
+            <SearchWithSelect
               value={selectedCustomer}
               options={["Walk-In Customer","search-result-1", "sh-2", "sh-3"]}
               label="Select Customer"
@@ -157,7 +157,7 @@ export default function AddSale() {
             <CustomInput type={"text"} ph={"Enter amount "} required={true} />
           </div>
           <div className="flex flex-col gap-2">
-            <CustomSearchSelect
+            <SearchWithSelect
               options={["search-result-1", "sh-2", "sh-3"]}
               label="Select Customer"
             />

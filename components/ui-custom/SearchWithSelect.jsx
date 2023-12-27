@@ -40,10 +40,10 @@ const SearchWithSelect = ({
   return (
     <div className="relative " ref={dropdownRef}>
       <div
-        className={`py-1 px-1.0 min-w-[80px] border rounded-md capitalize cursor-pointer flex justify-between items-center ${styles[bg]}`}
+        className={`py-1 px-1.0 h-full border rounded-md capitalize cursor-pointer flex justify-between items-center ${styles[bg]}`}
         onClick={toggleDropdown}
       >
-        <span
+        {label && <span
           className={
             bg == "blue"
               ? "bg-blue-900 text-wh font-semibold px-0.5 h-full rounded-md py-0.125"
@@ -51,14 +51,14 @@ const SearchWithSelect = ({
           }
         >
           {label}
-        </span>
+        </span>}
         {icon && icon}
         <span>{value ? value : ph}</span>
         <ChevronDown className="w-[1.2rem] h-[1.2rem] ms-1" />
       </div>
 
       {isOpen ? (
-        <ul className="absolute w-full z-10 top-full text-black  border  rounded-md shadow   overflow-y-auto scrollbar bg-white max-h-60">
+        <ul className="absolute w-fit z-10 top-full text-black  border  rounded-md shadow   overflow-y-auto bg-white max-h-[300px]">
           <li>
             <CustomInput type="text" />
           </li>
